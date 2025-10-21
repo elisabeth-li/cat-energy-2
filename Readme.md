@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Елизавета Ануфриева](https://up.htmlacademy.ru/adaptive-individual/2/user/2274011).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://github.com/SeraphimEvil).
 
 ---
 

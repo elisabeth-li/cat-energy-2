@@ -1,0 +1,23 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff 50%, #68b738 50%);
+  min-height: 580px;
+  padding: 40px 100px;
+}
+
+.hero__title {
+  margin-bottom: 40px;
+}
+
+.hero__subtitle {
+  margin-bottom: 52px;
+}
+
+.hero__image {
+  position: absolute;
+  margin: 0 auto;
+  top: 143px;
+  right: 288px;
+}

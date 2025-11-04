@@ -1,0 +1,28 @@
+.steps {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.steps__title {
+  margin-bottom: 32px;
+}
+
+.steps__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  max-width: 1140px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.steps__item {
+  min-width: 238px;
+  min-height: 280px;
+}
+
+.steps__text {
+  margin: 0;
+  padding: 0;
+}

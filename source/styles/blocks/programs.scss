@@ -1,0 +1,35 @@
+.programs__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1140px;
+  margin: 60px auto;
+  list-style: none;
+  padding: 0 20px;
+  font-family: $secondary-font;
+}
+
+.programs__item {
+  background: #f2f2f2;
+  padding: 47px 33px;
+}
+
+.programs__title {
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0 0 39px;
+}
+
+.programs__text {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 23px;
+}
+
+.programs__link {
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}

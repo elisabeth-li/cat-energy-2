@@ -2,10 +2,13 @@
   display: flex;
   justify-content: space-between;
   gap: 80px 0;
+  line-height: 20px;
 }
 
 .additional__title {
+  @include title;
   margin-bottom: 80px;
+  font-size: 24px;
 }
 
 .additional__list {
@@ -18,20 +21,29 @@
 
 .additional__item {
   display: grid;
-  grid-template-columns: 1fr auto auto auto;
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
   align-items: center;
+  color: $dark-grey;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-grey;
+
+  @include desktop {
+    grid-template-columns: 1fr auto auto auto;
+    gap: 40px;
+  }
 }
 
-.additional__quantity {
-  text-align: left;
+.additional__name {
+  @include subtitle;
+  grid-column: -1 / 1;
+}
+
+.additional__button {
+  @include button;
+  grid-column: -1 / 1;
 }
 
 .additional__price {
-  text-align: right;
-}
-
-.additional__gift {
-  max-width: 245px;
-  background-color: #68b738;
+  text-align: end;
 }

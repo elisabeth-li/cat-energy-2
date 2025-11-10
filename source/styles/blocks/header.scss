@@ -1,7 +1,132 @@
 .header {
-  background: linear-gradient(to right, #ffffff 50%, #68b738 50%);
+  font-family: $secondary-font;
+  padding-top: 13px;
+
+  @include tablet {
+    padding-top: 25px;
+  }
+
+  @include desktop {
+    padding-top: 55px;
+    margin-bottom: 82px;
+  }
+
+
+  &--background {
+    @include mobile {
+      .header__hero {
+        background: linear-gradient(to top, $basic-white 50%, $basic-green 50);
+        min-height: 380px;
+      }
+    }
+
+    @include desktop {
+      background: linear-gradient(to right, $basic-white 50%, $basic-green 50%);
+      min-height: 694px;
+    }
+  }
 }
 
-.header-catalog {
-  margin-bottom: 74px;
+.header--background .nav {
+  @include desktop {
+    .nav__link {
+      color: $basic-white;
+    }
+
+    .nav__item--active .nav__link {
+      border-bottom-color: inherit;
+    }
+  }
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+}
+
+.header__hero-wrapper {
+  margin-bottom: 27px;
+
+  @include tablet {
+    margin-bottom: 65px;
+  }
+
+  @include desktop {
+    margin-bottom: 80px;
+  }
+}
+
+.header__hero {
+  min-height: 480px;
+}
+
+.header__hero-content {
+  position: relative;
+  text-align: center;
+  padding: 37px 35px 0;
+
+  @include tablet {
+    max-width: 100%;
+    padding-top: 60px;
+    padding-left: 90px;
+    padding-right: 200px;
+    text-align: left;
+  }
+
+  @include desktop {
+    max-width: 45%;
+    padding-top: 110px;
+    padding-left: 80px;
+    padding-right: 0;
+  }
+}
+
+.header__hero-title {
+  @include title;
+  margin-bottom: 25px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+
+.header__hero-subtitle {
+  @include subtitle;
+  margin-bottom: 29px;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+
+  @include desktop {
+    margin-bottom: 52px;
+  }
+}
+
+.header__hero-button {
+  @include button;
+}
+
+.header__hero-image {
+  @include tablet {
+    position: absolute;
+    bottom: -341px;
+    z-index: -1;
+    max-width: 609px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    position: absolute;
+    bottom: -40px;
+    z-index: 1;
+    max-width: 552px;
+    text-align: center;
+    left: 220px;
+    right: 0;
+    margin: 0 auto;
+  }
 }

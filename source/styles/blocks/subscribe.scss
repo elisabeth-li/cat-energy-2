@@ -1,0 +1,44 @@
+.subscribe__title {
+  @include title;
+  font-size: 24px;
+}
+
+.subscribe__text {
+  font-family: $secondary-font;
+  text-align: center;
+  font-size: 16px;
+
+  @include desktop {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.subscribe__form {
+  display: grid;
+  gap: 16px;
+
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+  }
+}
+
+.subscribe__input {
+  @include subtitle;
+  color: $dark-grey;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid $border-grey;
+  width: 100%;
+
+  @include desktop {
+    min-width: 280px;
+  }
+}
+
+.subscribe__button {
+  @include button;
+}

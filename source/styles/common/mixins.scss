@@ -7,3 +7,82 @@
     src: $font-src;
   }
 }
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width-only) {
+    @content;
+  }
+}
+
+@mixin title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  margin: 0;
+
+  font-size: 36px;
+  line-height: 36px;
+  color: $basic-dark;
+
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@mixin subtitle {
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+  color: $basic-dark;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    color: $basic-dark;
+  }
+}
+
+@mixin button {
+  display: inline-block;
+  background: $basic-green;
+  color: $basic-white;
+  font-weight: 400;
+  font-family: $secondary-font;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  padding: 10px 63px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include tablet {
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@mixin button--secondary {
+  background-color: $light-grey;
+  color: $grey;
+}
+

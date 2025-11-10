@@ -1,0 +1,23 @@
+.academy__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #444444;
+}
+
+.academy__text {
+  font-family: $secondary-font;
+  font-size: 16px;
+
+  @include mobile {
+    font-size: 16px;
+    margin-right: auto;
+  }
+}
+
+.academy__logo {
+  width: 27px;
+  height: 34px;
+  flex-shrink: 0;
+}

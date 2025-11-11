@@ -12,32 +12,32 @@
   }
 
 
-  &--background {
-    @include mobile {
-      .header__hero {
-        background: linear-gradient(to top, $basic-white 50%, $basic-green 50);
-        min-height: 380px;
-      }
-    }
+  // &--background {
+  //   @include mobile {
+  //     .header__hero {
+  //       background: linear-gradient(to top, $basic-white 50%, $basic-green 50);
+  //       min-height: 380px;
+  //     }
+  //   }
 
-    @include desktop {
-      background: linear-gradient(to right, $basic-white 50%, $basic-green 50%);
-      min-height: 694px;
-    }
-  }
+  //   @include desktop {
+  //     background: linear-gradient(to right, $basic-white 50%, $basic-green 50%);
+  //     min-height: 694px;
+  //   }
+  // }
 }
 
-.header--background .nav {
-  @include desktop {
-    .nav__link {
-      color: $basic-white;
-    }
+// .header--background .nav {
+//   @include desktop {
+//     .nav__link {
+//       color: $basic-white;
+//     }
 
-    .nav__item--active .nav__link {
-      border-bottom-color: inherit;
-    }
-  }
-}
+//     .nav__item--active .nav__link {
+//       border-bottom-color: inherit;
+//     }
+//   }
+// }
 
 .header__top {
   display: flex;

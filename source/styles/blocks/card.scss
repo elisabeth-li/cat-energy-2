@@ -18,10 +18,13 @@
   grid-row: 1 / 3;
 }
 
-.card__link-title {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+.card__info-wrapper {
+  display: grid;
 }
+// .card__link-title {
+//   grid-column: 2 / 3;
+//   grid-row: 1 / 2;
+// }
 
 .card__title {
   @include subtitle;
@@ -42,16 +45,17 @@
 
 .card__item {
   grid-column: 1 / -1;
-  // display: contents;
+  display: flex;
 }
 
 
 .card__criterion {
   text-align: left;
+  flex-grow: 1;
 }
 
 .card__value {
-  text-align: right;
+  flex-grow: 0;
 }
 
 .card__button {

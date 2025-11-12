@@ -1,11 +1,13 @@
 .contacts__info {
-  display: flex;
   align-items: center;
   padding: 26px 20px;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $light-grey;
 
   @include tablet {
     padding: 60px 70px;
+    background-color: $basic-white;
   }
 
   @include desktop {

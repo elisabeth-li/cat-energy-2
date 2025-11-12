@@ -1,6 +1,14 @@
+.catalog__wrapper {
+  padding-bottom: 25px;
+}
+
 .catalog__title {
   @include title;
-  margin-bottom: 84px;
+  margin-bottom: 41px;
+
+  @include desktop {
+    margin-bottom: 84px;
+  }
 }
 
 .catalog__list {
@@ -14,6 +22,11 @@
   list-style: none;
 
   @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  @include desktop {
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
   }

@@ -1,9 +1,12 @@
 .header {
   font-family: $secondary-font;
   padding-top: 13px;
+  border-bottom: 1px solid $border-grey;
+  margin-bottom: 27px;
 
   @include tablet {
     padding-top: 25px;
+    border-bottom: 0;
   }
 
   @include desktop {

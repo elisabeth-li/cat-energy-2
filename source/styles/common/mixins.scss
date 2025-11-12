@@ -75,13 +75,13 @@
   line-height: 20px;
 
   @include tablet {
-    padding: 14px 26px;
     font-size: 20px;
     line-height: 26px;
   }
 }
 
 @mixin button--secondary {
+  @include button;
   background-color: $light-grey;
   color: $grey;
 }

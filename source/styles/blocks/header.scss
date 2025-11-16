@@ -13,33 +13,10 @@
     padding-top: 55px;
     margin-bottom: 82px;
   }
-
-
-  // &--background {
-  //   @include mobile {
-  //     .header__hero {
-  //       background: linear-gradient(to top, $basic-white 50%, $basic-green 50);
-  //       min-height: 380px;
-  //     }
-  //   }
-
-  //   @include desktop {
-  //     background: linear-gradient(to right, $basic-white 50%, $basic-green 50%);
-  //     min-height: 694px;
-  //   }
-  // }
 }
 
-// .header--background .nav {
-//   @include desktop {
-//     .nav__link {
-//       color: $basic-white;
-//     }
+// .header--background {
 
-//     .nav__item--active .nav__link {
-//       border-bottom-color: inherit;
-//     }
-//   }
 // }
 
 .header__top {
@@ -48,36 +25,65 @@
 }
 
 .header__hero-wrapper {
+  background-color: $basic-white;
+  background-image:
+    linear-gradient($overlay-green),
+    url("/images/background-image/hero-bc-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 320px 302px;
   margin-bottom: 27px;
 
   @include tablet {
+    background-image: none;
     margin-bottom: 65px;
   }
 
   @include desktop {
     margin-bottom: 80px;
+    background-color: $basic-white;
+    background-image:
+      linear-gradient($overlay-green),
+      url("/images/background-image/hero-bc-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 720px 694px;
   }
 }
 
 .header__hero {
-  min-height: 480px;
+  height: 480px;
+  width: 320px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include tablet {
+    width: 100%;
+    height: 875px;
+    background-image: none;
+    padding: 65px 0;
+    text-align: left;
+    position: relative;
+  }
+
+  @include desktop {
+    height: 694px;
+    padding: 0;
+  }
 }
 
 .header__hero-content {
   position: relative;
   text-align: center;
-  padding: 37px 35px 0;
 
   @include tablet {
     max-width: 100%;
-    padding-top: 60px;
     padding-left: 90px;
-    padding-right: 200px;
+    padding-right: 90px;
     text-align: left;
   }
 
   @include desktop {
-    max-width: 45%;
     padding-top: 110px;
     padding-left: 80px;
     padding-right: 0;
@@ -85,7 +91,7 @@
 }
 
 .header__hero-title {
-  @include title;
+  @include main-title;
   margin-bottom: 25px;
 
   @include tablet {
@@ -113,9 +119,7 @@
 .header__hero-image {
   @include tablet {
     position: absolute;
-    bottom: -341px;
     z-index: -1;
-    max-width: 609px;
     text-align: center;
     left: 0;
     right: 0;
@@ -132,4 +136,8 @@
     right: 0;
     margin: 0 auto;
   }
+}
+
+.header__hero-img {
+  width: 552px;
 }

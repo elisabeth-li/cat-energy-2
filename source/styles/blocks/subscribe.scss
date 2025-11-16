@@ -1,12 +1,27 @@
 .subscribe__wrapper {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @include tablet {
+    padding: 80px 68px;
+  }
+
+  @include desktop {
+    padding: 96px 110px 104px;
+  }
 }
 
 .subscribe__title {
   @include title;
-  font-size: 24px;
   margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 66px;
+  }
+
+  @include desktop {
+    margin-bottom: 72px;
+  }
 }
 
 .subscribe__text {
@@ -16,7 +31,8 @@
   margin: 0;
   margin-bottom: 24px;
 
-  @include desktop {
+
+  @include tablet {
     font-size: 24px;
     line-height: 32px;
   }
@@ -27,7 +43,7 @@
   gap: 16px;
 
 
-  @include desktop {
+  @include tablet {
     display: flex;
     justify-content: center;
     gap: 0;
@@ -48,11 +64,23 @@
   }
 }
 
+.subscribe__field {
+  @include tablet {
+    flex-grow: 1;
+  }
+
+  @include desktop {
+    max-width: 496px;
+  }
+}
+
 .subscribe__button {
   @include button;
   padding: 15px;
 
   @include tablet {
     padding-bottom: 12px;
+    min-width: 256px;
+    max-width: 512px;
   }
 }

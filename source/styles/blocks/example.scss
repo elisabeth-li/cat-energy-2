@@ -3,7 +3,7 @@
 }
 
 .example__title {
-  @include title;
+  @include main-title;
   margin-bottom: 40px;
 
   @include tablet {

@@ -1,27 +1,32 @@
 .additional {
-  display: flex;
-  justify-content: space-between;
-  gap: 80px 0;
-  line-height: 20px;
+  @include desktop {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 
+.additional__wrapper {
   @include tablet {
     display: block;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 0 80px;
   }
 }
 
 .additional__title {
   @include title;
   margin-bottom: 36px;
-  font-size: 24px;
-  line-height: 24px;
 
   @include tablet {
-    font-size: 32px;
-    line-height: 32px;
     margin-bottom: 80px;
   }
 
   @include desktop {
+    grid-column: 1/-1;
     margin-bottom: 80px;
   }
 }
@@ -35,6 +40,16 @@
   padding-top: 13px;
   margin-bottom: 35px;
   border-top: 1px solid $border-grey;
+
+  @include tablet {
+    border-top: none;
+    gap: 0;
+    margin-bottom: 70px;
+  }
+
+  @include desktop {
+    margin: 0;
+  }
 }
 
 .additional__item {
@@ -46,24 +61,83 @@
   padding-bottom: 20px;
   border-bottom: 1px solid $border-grey;
 
+  @include tablet {
+    padding: 28px 38px;
+    border: 1px solid $border-grey;
+  }
+
   @include desktop {
-    grid-template-columns: 1fr auto auto auto;
+    grid-template-columns: 280px 145px 104px 244px;
     gap: 40px;
+    padding: 15px 0;
+    border-left: 0;
+    border-right: 0;
   }
 }
 
 .additional__name {
   @include subtitle;
   grid-column: -1 / 1;
+
+  @include desktop {
+    grid-column: 1;
+  }
+}
+
+.additional__quantity {
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .additional__button {
   @include button;
   grid-column: -1 / 1;
+
+  @include desktop {
+    grid-column: auto;
+  }
 }
 
 .additional__price {
   text-align: end;
+
+  @include desktop {
+    text-align: start;
+  }
+}
+
+.additional__gift {
+  height: 290px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("/images/background-image/gift-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/images/background-image/gift-bc-mobile@2x.jpg");
+    background-size: 280px auto;
+  }
+
+  @include tablet {
+    height: 200px;
+    background-image: url("/images/background-image/gift-bc-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/images/background-image/gift-bc-tablet@2x.jpg");
+      background-size: 707px auto;
+    }
+  }
+
+  @include desktop {
+    height: 288px;
+    background-image: url("/images/background-image/gift-bc-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/images/background-image/gift-bc-desktop@2x.jpg");
+      background-size: 245px auto;
+    }
+  }
 }
 
 .additional__gift-text {

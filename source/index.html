@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>Cat Energy — функциональное питание для котов</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/16x16.png">
@@ -16,7 +17,11 @@
   <header class="header header--background">
     <div class="header__top container">
       <a class="header__logo" href="#">
-        <img class="header__logo-img" src="images/logo-cat-energy.svg" alt="Логотип Cat Energy" width="202" height="59">
+        <picture>
+          <source media="(min-width: 1440px)" width="202" height="59" type="image/svg+xml" srcset="images/logo/logo-cat-energy-desktop.svg">
+          <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="images/logo/logo-cat-energy-tablet.svg">
+          <img class="header__logo-img" src="images/logo/logo-cat-energy-mobile.svg" alt="Логотип Cat Energy" width="33" height="38">
+        </picture>
       </a>
       <nav class="header__nav nav">
         <button class="nav__toggle" type="button" aria-label="Переключатель меню">
@@ -44,7 +49,11 @@
           <a class="header__hero-button button" href="#">Подобрать программу</a>
         </div>
         <div class="header__hero-image">
-          <img class="header__hero-img" src="images/product_cat-energy.png" alt="Банка Cat Energy Pro 'Курица'" width="552" height="499">
+          <picture>
+            <source media="(min-width: 1440)" width="552" height="499" type="image/png" srcset="images/main/hero-product-desktop.png 1x, images/main/hero-product-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/main/hero-product-tablet.png 1x, images/main/hero-product-tablet@2x.png 2x">
+            <img class="header__hero-img" src="images/main/hero-product-mobile.png" srcset="images/main/hero-product-mobile@2x.png 2x" alt="Банка Cat Energy Pro 'Курица'" width="280" height="270">
+          </picture>
         </div>
       </div>
     </div>
@@ -115,8 +124,16 @@
 
         <div class="example__slider slider">
           <div class="slider__images">
-            <img class="slider__image slider__image--before" width="560" height="512" src="/images/cat-pro.png" alt="Толстый кот">
-            <img class="slider__image slider__image--after" width="560" height="512" src="images/cat-slim.png" alt="Похудевший кот">
+            <picture>
+              <source media="(min-width: 1440px)" width="560" height="512" type="image/png" srcset="images/example/example-before-tablet.png 1x, images/example/example-before-tablet@2x.png 2x">
+              <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/example/example-before-tablet.png 1x, images/example/example-before-tablet@2x.png 2x">
+              <img class="slider__image slider__image--before" width="280" height="256" src="images/example/example-before-mobile.png" srcset="images/example/example-before-mobile@2x.png 2x" alt="Толстый кот">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" width="560" height="512" type="image/png" srcset="images/example/example-after-tablet.png 1x, images/example/example-after-tablet@2x.png 2x">
+              <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/example/example-after-tablet.png 1x, images/example/example-after-tablet@2x.png 2x">
+              <img class="slider__image slider__image--after" width="280" height="256" src="images/example/example-after-mobile.png" srcset="images/example/example-after-mobile@2x.png 2x" alt="Похудевший кот">
+            </picture>
           </div>
           <div class="slider__controls">
             <button class="slider__button" type="button">Было</button>
@@ -140,7 +157,11 @@
         </p>
       </div>
       <div class="contacts__map">
-        <img class="contacts__map-img" src="images/location.jpg" width="1440" height="400" alt="Карта — Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+        <picture>
+          <source media="(min-width: 1440px)" width="1440" height="400" type="image/jpeg" srcset="images/location/location-desktop.jpg 1x, images/location/location-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="768" height="400" type="image/jpeg" srcset="images/location/location-tablet.jpg 1x, images/location/location-tablet@2x.jpg 2x">
+          <img class="contacts__map-img" src="images/location/location.jpg" srcset="images/location/location@2x.jpg 2x" width="320" height="362" alt="Карта — Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+        </picture>
       </div>
     </section>
   </main>
@@ -148,7 +169,7 @@
   <footer class="footer">
     <div class="footer__wrapper container">
       <a class="footer__logo" href="#">
-        <img class="footer__logo-img" src="images/logo_footer.svg" alt="Cat Energy" width="128" height="24">
+        <img class="footer__logo-img" src="images/logo/logo-cat-energy-text-mobile.svg" alt="Cat Energy" width="128" height="24">
       </a>
       <ul class="footer__social social">
         <li class="social__item">
@@ -170,7 +191,7 @@
       <div class="footer__partner academy">
         <a class="academy__link" href="#">
           <span class="academy__text">HTML Academy</span>
-          <img class="academy__logo" width="27" height="34" src="images/logo_html-academy.svg" alt="HTML Academy">
+          <img class="academy__logo" width="27" height="34" src="images/logo/logo-html-academy.svg" alt="HTML Academy">
         </a>
       </div>
     </div>

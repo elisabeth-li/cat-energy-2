@@ -1,6 +1,10 @@
 .header {
   font-family: $secondary-font;
   padding-top: 13px;
+<<<<<<< HEAD
+=======
+  border-bottom: 1px solid $border-grey;
+>>>>>>> 92b91fe (Module4)
   margin-bottom: 27px;
 
   @include tablet {
@@ -20,6 +24,7 @@
 }
 
 .header__hero-wrapper {
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,22 +39,78 @@
   @include desktop {
     padding-left: 50px;
     padding-right: 50px;
+=======
+  background-color: $basic-white;
+  background-image:
+    linear-gradient($overlay-green),
+    url("/images/background-image/hero-bc-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 320px 302px;
+  margin-bottom: 27px;
+
+  @include tablet {
+    background-image: none;
+    margin-bottom: 65px;
+  }
+
+  @include desktop {
+    margin-bottom: 80px;
+    background-color: $basic-white;
+    background-image:
+      linear-gradient($overlay-green),
+      url("/images/background-image/hero-bc-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 720px 694px;
+>>>>>>> 92b91fe (Module4)
   }
 }
 
 .header__hero {
+<<<<<<< HEAD
+=======
+  height: 480px;
+  width: 320px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include tablet {
+    width: 100%;
+    height: 875px;
+    background-image: none;
+    padding: 65px 0;
+    text-align: left;
+    position: relative;
+  }
+
+  @include desktop {
+    height: 694px;
+    padding: 0;
+  }
+}
+
+.header__hero-content {
+>>>>>>> 92b91fe (Module4)
   position: relative;
   margin-bottom: 20px;
   margin-top: 27px;
   text-align: center;
 
   @include tablet {
+<<<<<<< HEAD
     padding: 50px 0 80px;
     position: relative;
+=======
+    max-width: 100%;
+    padding-left: 90px;
+    padding-right: 90px;
+>>>>>>> 92b91fe (Module4)
     text-align: left;
   }
 
   @include desktop {
+<<<<<<< HEAD
     padding: 80px 0 100px;
   }
 }
@@ -116,6 +177,11 @@
   @include desktop {
     max-width: 50%;
     padding: 0 80px;
+=======
+    padding-top: 110px;
+    padding-left: 80px;
+    padding-right: 0;
+>>>>>>> 92b91fe (Module4)
   }
 }
 
@@ -177,6 +243,7 @@
 }
 
 .header__hero-img {
+<<<<<<< HEAD
   width: 280px;
   height: auto;
 
@@ -187,4 +254,7 @@
   @include desktop {
     width: 552px;
   }
+=======
+  width: 552px;
+>>>>>>> 92b91fe (Module4)
 }

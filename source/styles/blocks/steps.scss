@@ -42,7 +42,7 @@
   @include desktop {
     gap: 50px;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 1140px;
+    max-width: 100%;
   }
 }
 

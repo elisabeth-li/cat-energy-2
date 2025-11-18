@@ -24,7 +24,7 @@
 
   @include desktop {
     grid-template-columns: 1fr 1fr;
-    max-width: 1140px;
+    max-width: 100%;
     gap: 80px;
   }
 }

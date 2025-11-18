@@ -21,68 +21,84 @@
 }
 
 .header__hero-wrapper {
-  background-color: $basic-white;
-  background-image:
-    linear-gradient($overlay-green),
-    url("/images/background-image/hero-bc-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 320px 302px;
-  margin-bottom: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 
   @include tablet {
-    background-image: none;
-    margin-bottom: 65px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   @include desktop {
-    margin-bottom: 80px;
-    background-color: $basic-white;
-    background-image:
-      linear-gradient($overlay-green),
-      url("/images/background-image/hero-bc-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 720px 694px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
 .header__hero {
-  height: 480px;
-  width: 320px;
+  position: relative;
   margin-bottom: 20px;
+  margin-top: 27px;
   text-align: center;
 
   @include tablet {
-    width: 100%;
-    height: 875px;
-    background-image: none;
-    padding: 65px 0;
-    text-align: left;
+    padding: 50px 0 80px;
     position: relative;
+    text-align: left;
   }
 
   @include desktop {
-    height: 694px;
-    padding: 0;
+    padding: 80px 0 100px;
+  }
+}
+
+.header--background {
+  position: relative;
+}
+
+.header--background::after {
+  content: "";
+  z-index: -1;
+  color: $basic-white;
+  background-image: linear-gradient($overlay-green), url("/images/background-image/hero-bc-mobile.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 302px;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  background-size: 320px 302px;
+
+  @include tablet {
+    background-image: none;
+  }
+
+  @include desktop {
+    width: 50%;
+    height: 100%;
+    background-image:
+      linear-gradient($overlay-green),
+      url("/images/background-image/hero-bc-desktop.jpg");
+    background-position: 100% 0;
+    top: 0;
+    background-size: 720px 694px;
   }
 }
 
 .header__hero-content {
-  position: relative;
-  text-align: center;
+  margin-bottom: 20px;
 
   @include tablet {
-    max-width: 100%;
-    padding-left: 90px;
-    padding-right: 90px;
-    text-align: left;
+    max-width: 380px;
+    margin: 0;
   }
 
   @include desktop {
-    padding-top: 110px;
-    padding-left: 80px;
-    padding-right: 0;
+    max-width: 450px;
   }
 }
 
@@ -113,6 +129,10 @@
 }
 
 .header__hero-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
   @include tablet {
     position: absolute;
     z-index: -1;
@@ -135,5 +155,14 @@
 }
 
 .header__hero-img {
-  width: 552px;
+  width: 280px;
+  height: auto;
+
+  @include tablet {
+    width: 400px;
+  }
+
+  @include desktop {
+    width: 552px;
+  }
 }

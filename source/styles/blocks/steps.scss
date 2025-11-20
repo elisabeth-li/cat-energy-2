@@ -4,6 +4,27 @@
   }
 }
 
+.step--leaf::before {
+  background-image: url("../../icons/stack.svg#icon-leaf");
+  background-color: $basic-green;
+  background-size: 30px 32px;
+}
+
+.step--water::before {
+  background-image: url("../../icons/stack.svg#icon-water");
+  background-size: 30px 32px;
+}
+
+.step--eat::before {
+  background-image: url("../../icons/stack.svg#icon-eat");
+  background-size: 30px 32px;
+}
+
+.step--alarm::before {
+  background-image: url("../../icons/stack.svg#icon-alarm");
+  background-size: 30px 32px;
+}
+
 .steps__wrapper {
   padding-bottom: 49px;
 
@@ -49,11 +70,14 @@
 .steps__item {
   display: flex;
   align-items: center;
+  gap: 20px;
 
   @include tablet {
     position: relative;
-    min-width: 246px;
+    max-width: 250px;
     min-height: 280px;
+    display: grid;
+    gap: 0;
   }
 
   @include desktop {
@@ -63,6 +87,22 @@
 }
 
 .steps__item::before {
+  content: "";
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: $basic-green;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: block;
+
+  @include tablet {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.steps__item::after {
   @include tablet {
     counter-increment: steps-counter;
     content: counter(steps-counter);
@@ -81,4 +121,11 @@
   margin: 0;
   padding: 0;
   z-index: 1;
+  font-size: 14px;
+  line-height: 18px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

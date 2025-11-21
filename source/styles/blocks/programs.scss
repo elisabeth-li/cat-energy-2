@@ -1,12 +1,32 @@
+.programs__wrapper {
+  padding-bottom: 20px;
+
+  @include tablet {
+    padding-bottom: 45px;
+  }
+
+  @include desktop {
+    padding-bottom: 70px;
+  }
+}
+
 .programs__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  max-width: 1140px;
-  margin: 60px auto;
+  grid-template-columns: 1fr;
+  gap: 20px;
   list-style: none;
-  padding: 0 20px;
-  font-family: $secondary-font;
+  padding: 0;
+  margin: 0;
+
+  @include tablet {
+    gap: 30px;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+    gap: 80px;
+  }
 }
 
 .programs__item {
@@ -14,22 +34,23 @@
   padding: 47px 33px;
 }
 
-.programs__title {
+.program__title {
   font-size: 36px;
+  font-family: $secondary-font;
   line-height: 36px;
   margin: 0 0 39px;
 }
 
-.programs__text {
+.program__text {
   font-family: $primary-font;
   font-size: 16px;
   line-height: 24px;
   margin: 0 0 23px;
 }
 
-.programs__link {
-  font-size: 20px;
+.program__link {
+  font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000000;
+  color: $basic-dark;
 }

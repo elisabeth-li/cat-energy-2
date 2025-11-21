@@ -1,7 +1,19 @@
-$primary-font:"Lato", sans-serif;
-$secondary-font: "Oswald", sans-serif;
+$primary-font: "Lato", "Cambria", sans-serif;
+$secondary-font: "Oswald", "Cambria", sans-serif;
 
 // Viewports
 $tablet-width: 768px;
-$desktop-width: 1200px;
+$desktop-width: 1440px;
 $mobile-width-only: 767px;
+
+
+//Colors
+$dark-grey:#444444;
+$grey:#222222;
+$basic-dark:#000000;
+$border-grey:#cdcdcd;
+$light-grey:#f2f2f2;
+$basic-green:#68b738;
+$basic-white:#ffffff;
+$basic-border:#e6e6e6;
+$overlay-green:rgba(104, 183, 56, 0.85);

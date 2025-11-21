@@ -1,0 +1,97 @@
+.card {
+  align-items: center;
+  text-align: center;
+  color: $dark-grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  @include tablet {
+    line-height: 20px;
+    grid-template-columns: 1fr;
+    padding: 30px 37px 40px;
+  }
+
+  @include desktop {
+    padding: 19px 38px 40px;
+    justify-content: center;
+  }
+}
+
+.card--more {
+  grid-template-columns: 1fr;
+
+  .card__title {
+    text-align: center;
+  }
+}
+
+.card__link {
+  color: $grey;
+  text-decoration: none;
+
+  @include tablet {
+    padding-bottom: 20px;
+  }
+}
+
+.card__info-wrapper {
+  display: grid;
+  align-self: end;
+}
+
+.card__title {
+  @include subtitle;
+  color: $dark-grey;
+  text-align: left;
+  font-size: 16px;
+  padding-bottom: 14px;
+  line-height: 20px;
+
+  @include tablet {
+    text-align: center;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    padding-bottom: 23px;
+  }
+}
+
+.card__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+
+  @include tablet {
+    gap: 10px;
+  }
+}
+
+.card__item {
+  grid-column: 1 / -1;
+  display: flex;
+}
+
+
+.card__criterion {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.card__value {
+  flex-grow: 0;
+}
+
+.card__button {
+  @include button;
+  grid-column: -1 / 1;
+}
+
+.card__button--secondary {
+  @include button--secondary;
+}

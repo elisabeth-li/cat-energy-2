@@ -1,5 +1,6 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -8,41 +9,12 @@ html {
   font-family: $primary-font;
   font-size: 16px;
   line-height: 24px;
-  color: #000000;
 }
 
 img {
   max-width: 100%;
-  display: block;
-}
-
-.title {
-  font-family: $secondary-font;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.subtitle {
-  font-family: $secondary-font;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.button {
-  display: inline-block;
-  background: #68b738;
-  color: #ffffff;
-  padding: 14px 28px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 400;
-  font-family: $secondary-font;
-  line-height: 26px;
-  font-size: 20px;
+  height: auto;
+  object-fit: contain;
 }
 
 .visually-hidden {

@@ -112,51 +112,30 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-<<<<<<< HEAD
   background-image: linear-gradient($overlay-green), url("/images/background-image/gift-mobile.jpg");
 
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-mobile@2x.jpg");
-=======
-  background-image: url("/images/background-image/gift-mobile.jpg");
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("/images/background-image/gift-bc-mobile@2x.jpg");
->>>>>>> 92b91fe (Module4)
     background-size: 280px auto;
   }
 
   @include tablet {
     height: 200px;
-<<<<<<< HEAD
     background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-tablet@2x.jpg");
-=======
-    background-image: url("/images/background-image/gift-bc-tablet.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("/images/background-image/gift-bc-tablet@2x.jpg");
->>>>>>> 92b91fe (Module4)
       background-size: 707px auto;
     }
   }
 
   @include desktop {
     height: 288px;
-<<<<<<< HEAD
     padding: 56px 42px 42px;
     background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-desktop@2x.jpg");
-=======
-    background-image: url("/images/background-image/gift-bc-desktop.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("/images/background-image/gift-bc-desktop@2x.jpg");
->>>>>>> 92b91fe (Module4)
       background-size: 245px auto;
     }
   }
@@ -164,8 +143,5 @@
 
 .additional__gift-text {
   margin: 0;
-<<<<<<< HEAD
   color: $basic-white;
-=======
->>>>>>> 92b91fe (Module4)
 }

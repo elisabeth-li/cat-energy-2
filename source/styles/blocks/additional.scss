@@ -54,24 +54,26 @@
 
 .additional__item {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr auto;
   gap: 15px;
   align-items: center;
   color: $dark-grey;
-  padding-bottom: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid $border-grey;
 
   @include tablet {
-    padding: 28px 38px;
+    grid-template-columns: 1fr auto;
     border: 1px solid $border-grey;
+    border-left: 0;
+    border-right: 0;
+    padding: 25px 38px;
   }
 
   @include desktop {
-    grid-template-columns: 280px 145px 104px 244px;
+    grid-template-columns: 280px 1fr 1fr 244px;
     gap: 40px;
     padding: 15px 0;
-    border-left: 0;
-    border-right: 0;
+    border: none;
   }
 }
 
@@ -86,7 +88,7 @@
 
 .additional__quantity {
   @include desktop {
-    text-align: left;
+    grid-column: 2;
   }
 }
 
@@ -95,23 +97,25 @@
   grid-column: -1 / 1;
 
   @include desktop {
-    grid-column: auto;
+    grid-column: 4;
   }
 }
 
 .additional__price {
-  text-align: end;
+  text-align: right;
 
   @include desktop {
-    text-align: start;
+    text-align: left;
+    grid-column: 3;
   }
 }
 
 .additional__gift {
   height: 290px;
+  padding: 60px 20px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-image: linear-gradient($overlay-green), url("/images/background-image/gift-mobile.jpg");
 
   @media (min-resolution: 2dppx) {
@@ -121,6 +125,7 @@
 
   @include tablet {
     height: 200px;
+    padding: 60px 80px;
     background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-tablet.jpg");
 
     @media (min-resolution: 2dppx) {

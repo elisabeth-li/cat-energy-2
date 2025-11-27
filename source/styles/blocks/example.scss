@@ -1,5 +1,19 @@
 .example__wrapper {
+  @include container;
   padding-top: 45px;
+  padding-bottom: 40px;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 85px;
+  }
+}
+
+.example {
+  @include desktop {
+    position: relative;
+  }
 }
 
 .example__content {
@@ -7,6 +21,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  @include desktop {
+    max-width: 50%;
   }
 }
 
@@ -46,7 +64,6 @@
   @include tablet {
     grid-template-columns: repeat(2, 162px);
     gap: 42px;
-    margin: 0 0 55px;
   }
 }
 
@@ -64,7 +81,7 @@
   position: relative;
   border-radius: 4px;
 
-  @include desktop {
+  @include tablet {
     width: 162px;
     height: 77px;
   }
@@ -100,7 +117,7 @@
   @include tablet {
     font-size: 30px;
     line-height: 37px;
-    margin: 0 0 11px;
+    margin: 0;
   }
 }
 
@@ -120,6 +137,8 @@
   @include tablet {
     font-size: 14px;
     line-height: 14px;
+    bottom: -6px;
+    padding: 0;
   }
 }
 
@@ -136,7 +155,15 @@
   }
 }
 
-.example__image {
-  display: flex;
-  justify-content: center;
+.example__slider {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include desktop {
+    position: absolute;
+    right: 120px;
+    top: 0;
+  }
 }

@@ -26,6 +26,23 @@
   }
 }
 
+@mixin container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0 30px;
+    max-width: 768px;
+  }
+
+  @include desktop {
+    padding: 0 110px;
+    max-width: 1440px;
+  }
+}
+
+
 @mixin main-title {
   font-family: $secondary-font;
   font-weight: 400;

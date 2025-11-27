@@ -52,6 +52,10 @@
     max-width: 55%;
     line-height: 26px;
   }
+
+  @include desktop {
+    max-width: 100%;
+  }
 }
 
 .contacts__address {

@@ -1,4 +1,5 @@
 .footer__wrapper {
+  @include container;
   display: flex;
   align-items: center;
   background-color: $light-grey;

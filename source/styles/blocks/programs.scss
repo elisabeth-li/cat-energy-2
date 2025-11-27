@@ -1,4 +1,5 @@
 .programs__wrapper {
+  @include container;
   padding-bottom: 20px;
 
   @include tablet {

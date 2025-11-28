@@ -139,7 +139,7 @@
   }
 }
 
-.program--slim::after {
+.programs__item-icon--slim::after {
   content: "";
   background-image: url("../../icons/stack.svg#icon-cat-slim");
   background-repeat: no-repeat;
@@ -166,7 +166,7 @@
   }
 }
 
-.program--pro::after {
+.programs__item-icon--pro::after {
   content: "";
   background-image: url("../../icons/stack.svg#icon-cat-pro");
   background-repeat: no-repeat;

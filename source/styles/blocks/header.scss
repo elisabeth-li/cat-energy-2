@@ -15,11 +15,13 @@
 }
 
 .header__top {
+  @include container;
   display: flex;
   align-items: center;
 }
 
 .header__hero-wrapper {
+  @include container;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +78,7 @@
     background-image:
       linear-gradient($overlay-green),
       url("/images/background-image/hero-bc-mobile@2x.jpg");
-    background-size: 640px auto;
+    background-size: 320px 302px;
   }
 
   @include tablet {
@@ -98,7 +100,7 @@
       background-image:
         linear-gradient($overlay-green),
         url("/images/background-image/hero-bc-desktop@2x.jpg");
-      background-size: cover;
+      background-size: 720px 694px;
     }
   }
 }
@@ -143,9 +145,13 @@
 
 .header__hero-button {
   @include button;
+  position: absolute;
+  left: 7%;
+  bottom: 4%;
 
   @include tablet {
     padding: 14px 24px;
+    position: inherit;
   }
 }
 
@@ -153,6 +159,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  padding-bottom: 22%;
 
   @include tablet {
     position: absolute;
@@ -162,6 +170,7 @@
     right: 0;
     bottom: 0;
     margin: 0 auto;
+    padding: 0;
   }
 
   @include desktop {
@@ -186,5 +195,18 @@
 
   @include desktop {
     width: 552px;
+  }
+}
+
+.header__name {
+  margin-left: auto;
+}
+
+.header__name-img {
+  width: 101px;
+  height: auto;
+
+  @include tablet {
+    display: none;
   }
 }

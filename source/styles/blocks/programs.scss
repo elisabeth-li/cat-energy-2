@@ -1,4 +1,5 @@
 .programs__wrapper {
+  @include container;
   padding-bottom: 20px;
 
   @include tablet {
@@ -30,27 +31,164 @@
 }
 
 .programs__item {
-  background: #f2f2f2;
-  padding: 47px 33px;
+  background: $light-grey;
+  padding: 30px 30px 18px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding: 77px 63px 53px 52px;
+  }
 }
 
-.program__title {
-  font-size: 36px;
+.programs__title {
+  font-size: 24px;
   font-family: $secondary-font;
-  line-height: 36px;
-  margin: 0 0 39px;
+  line-height: 37px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0 0 30px;
+  padding-left: 70px;
+  margin-top: -45px;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+    margin: 0 0 24px;
+  }
+
+  @include desktop {
+    margin: 0 0 74px 23px;
+    padding-left: 62px;
+    text-align: center;
+  }
 }
 
-.program__text {
+.programs__text {
   font-family: $primary-font;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 0 23px;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 15px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $basic-border;
+
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 57%;
+    padding-bottom: 49px;
+    border-bottom: 0;
+  }
+
+  @include desktop {
+    max-width: 100%;
+    padding-bottom: 23px;
+  }
 }
 
-.program__link {
+.programs__link {
   font-size: 16px;
+  line-height: 16px;
   text-decoration: none;
   text-transform: uppercase;
   color: $basic-dark;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 100%;
+  }
+}
+
+
+.programs__link--more::after {
+  content: "";
+  width: 24px;
+  height: 12px;
+  background-color: $basic-dark;
+
+  mask: url("../../icons/stack.svg#icon-arrow") center/contain no-repeat;
+}
+
+
+.programs__item-icon {
+  content: "";
+  border-radius: 50%;
+  background-color: $overlay-green;
+  width: 50px;
+  height: 50px;
+  display: block;
+
+  @include tablet {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 63px;
+  }
+
+  @include desktop {
+    width: 100px;
+    height: 100px;
+    right: auto;
+    top: 41px;
+  }
+}
+
+.programs__item-icon--slim::after {
+  content: "";
+  background-image: url("../../icons/stack.svg#icon-cat-slim");
+  background-repeat: no-repeat;
+  background-size: 36px 50px;
+  top: 27px;
+  left: 27px;
+  position: absolute;
+  width: 36px;
+  height: 50px;
+
+  @include tablet {
+    background-size: 140px 194px;
+    width: 140px;
+    height: 194px;
+    top: -17px;
+  }
+
+  @include desktop {
+    background-size: 70px 97px;
+    width: 70px;
+    height: 97px;
+    top: -7px;
+    left: 20px;
+  }
+}
+
+.programs__item-icon--pro::after {
+  content: "";
+  background-image: url("../../icons/stack.svg#icon-cat-pro");
+  background-repeat: no-repeat;
+  background-size: 67px 28px;
+  top: 40px;
+  left: 10px;
+  position: absolute;
+  width: 67px;
+  height: 28px;
+
+  @include tablet {
+    background-size: 268px 112px;
+    width: 268px;
+    height: 112px;
+    left: -36px;
+  }
+
+  @include desktop {
+    background-size: 134px 56px;
+    width: 134px;
+    height: 56px;
+    top: 25px;
+    left: -15px;
+  }
 }

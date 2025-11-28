@@ -14,16 +14,7 @@
   }
 
   @include desktop {
-    padding: 19px 38px 40px;
     justify-content: center;
-  }
-}
-
-.card--more {
-  grid-template-columns: 1fr;
-
-  .card__title {
-    text-align: center;
   }
 }
 
@@ -46,7 +37,7 @@
   color: $dark-grey;
   text-align: left;
   font-size: 16px;
-  padding-bottom: 14px;
+  padding: 0 0 14px;
   line-height: 20px;
 
   @include tablet {
@@ -75,6 +66,8 @@
 .card__item {
   grid-column: 1 / -1;
   display: flex;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 
@@ -92,6 +85,53 @@
   grid-column: -1 / 1;
 }
 
-.card__button--secondary {
-  @include button--secondary;
+.card--more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid $border-grey;
+
+
+  @include tablet {
+    display: grid;
+    border: 1px solid $border-grey;
+  }
+
+  .card__title {
+    @include subtitle;
+    color: $dark-grey;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .card__button {
+    @include button--secondary;
+    width: 100%;
+    margin-top: auto;
+
+    @include desktop {
+      padding: 10px 0;
+    }
+  }
+}
+
+.card--more::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: $grey-icon;
+  mask-image: url("../../icons/stack.svg#icon-plus");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 30px 30px;
+  margin-bottom: 23px;
+  margin-top: 25px;
+
+  @include tablet {
+    width: 60px;
+    height: 60px;
+    mask-size: 60px 60px;
+    margin: 0 auto;
+    padding: 30px 37px 40px;
+  }
 }

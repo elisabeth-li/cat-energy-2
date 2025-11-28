@@ -4,28 +4,8 @@
   }
 }
 
-.step--leaf::before {
-  background-image: url("../../icons/stack.svg#icon-leaf");
-  background-color: $basic-green;
-  background-size: 30px 32px;
-}
-
-.step--water::before {
-  background-image: url("../../icons/stack.svg#icon-water");
-  background-size: 30px 32px;
-}
-
-.step--eat::before {
-  background-image: url("../../icons/stack.svg#icon-eat");
-  background-size: 30px 32px;
-}
-
-.step--alarm::before {
-  background-image: url("../../icons/stack.svg#icon-alarm");
-  background-size: 30px 32px;
-}
-
 .steps__wrapper {
+  @include container;
   padding-bottom: 49px;
 
   @include tablet {
@@ -45,14 +25,11 @@
 }
 
 .steps__list {
-  display: grid;
-  list-style: none;
-  padding: 0;
   margin: 0;
-  color: $dark-grey;
-  max-width: 100%;
+  padding: 0;
+  list-style: none;
 
-  grid-template-columns: repeat(1, 1fr);
+  display: grid;
   row-gap: 20px;
 
   @include tablet {
@@ -61,9 +38,8 @@
   }
 
   @include desktop {
-    gap: 50px;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 100%;
+    gap: 70px;
   }
 }
 
@@ -74,58 +50,84 @@
 
   @include tablet {
     position: relative;
-    max-width: 250px;
+    display: block;
     min-height: 280px;
-    display: grid;
-    gap: 0;
+    max-width: 230px;
   }
 
   @include desktop {
-    min-width: 230px;
-    min-height: 280px;
+    max-width: 250px;
   }
 }
 
 .steps__item::before {
   content: "";
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-color: $basic-green;
-  flex-shrink: 0;
+  display: block;
+
   width: 60px;
   height: 60px;
-  display: block;
+  padding-right: 60px;
+  background-color: $basic-green;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 32px;
 
   @include tablet {
     width: 80px;
     height: 80px;
+    margin-top: 40px;
+    padding-right: 0;
   }
 }
+
+.step--leaf::before {
+  background-image: url("../../icons/stack.svg#icon-leaf");
+}
+
+.step--water::before {
+  background-image: url("../../icons/stack.svg#icon-water");
+}
+
+.step--eat::before {
+  background-image: url("../../icons/stack.svg#icon-eat");
+}
+
+.step--alarm::before {
+  background-image: url("../../icons/stack.svg#icon-alarm");
+}
+
 
 .steps__item::after {
   @include tablet {
     counter-increment: steps-counter;
     content: counter(steps-counter);
+
     position: absolute;
-    color: $light-grey;
-    display: flex;
-    align-items: center;
-    font-size: 280px;
-    max-width: 100%;
-    min-height: 280px;
     right: 0;
+    top: 0;
+
+    font-size: 280px;
+    font-family: $secondary-font;
+    color: $light-grey;
+    line-height: 1;
+
+    z-index: 0;
   }
 }
 
 .step__text {
   margin: 0;
-  padding: 0;
+  color: $dark-grey;
   z-index: 1;
+
   font-size: 14px;
   line-height: 18px;
 
   @include tablet {
     font-size: 16px;
     line-height: 24px;
+    position: relative;
+    padding-top: 31px;
   }
 }

@@ -14,7 +14,7 @@
 .programs__list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -32,13 +32,22 @@
 
 .programs__item {
   background: $light-grey;
-  padding: 30px 30px 18px 20px;
+  padding: 23px 30px 18px 20px;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  align-items: center;
 
   @include tablet {
-    padding: 77px 63px 53px 52px;
+    flex-direction: column;
+    padding: 79px 63px 60px 52px;
+    align-items: start;
+  }
+
+  @include desktop {
+    flex-flow: row wrap;
+    align-items: center;
+    padding-bottom: 64px;
   }
 }
 
@@ -48,20 +57,18 @@
   line-height: 37px;
   text-transform: uppercase;
   font-weight: 400;
-  margin: 0 0 30px;
-  padding-left: 70px;
-  margin-top: -45px;
+  margin: 0 0 0 20px;
 
   @include tablet {
     font-size: 36px;
     line-height: 36px;
     padding: 0;
-    margin: 0 0 24px;
+    margin: 0 0 2px;
   }
 
   @include desktop {
-    margin: 0 0 74px 23px;
-    padding-left: 62px;
+    margin: 0 auto;
+    padding-left: 33px;
     text-align: center;
   }
 }
@@ -70,8 +77,8 @@
   font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
-  margin: 0 0 15px;
-  padding-bottom: 23px;
+  margin: 0 0 20px;
+  padding: 22px 0;
   border-bottom: 1px solid $basic-border;
 
 
@@ -79,17 +86,20 @@
     font-size: 16px;
     line-height: 24px;
     max-width: 57%;
-    padding-bottom: 49px;
+    padding-bottom: 39px;
+    margin: 0 0 18px;
     border-bottom: 0;
   }
 
   @include desktop {
     max-width: 100%;
-    padding-bottom: 23px;
+    padding: 73px 0 33px;
+    margin: 0;
   }
 }
 
 .programs__link {
+  font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
@@ -123,19 +133,21 @@
   width: 50px;
   height: 50px;
   display: block;
+  position: relative;
 
   @include tablet {
     width: 200px;
     height: 200px;
     position: absolute;
     right: 63px;
+    top: 92px;
   }
 
   @include desktop {
     width: 100px;
     height: 100px;
     right: auto;
-    top: 41px;
+    top: 47px;
   }
 }
 
@@ -144,8 +156,8 @@
   background-image: url("../../icons/stack.svg#icon-cat-slim");
   background-repeat: no-repeat;
   background-size: 36px 50px;
-  top: 27px;
-  left: 27px;
+  top: -2px;
+  left: 7px;
   position: absolute;
   width: 36px;
   height: 50px;
@@ -154,15 +166,16 @@
     background-size: 140px 194px;
     width: 140px;
     height: 194px;
-    top: -17px;
+    top: -11px;
+    left: 30px;
   }
 
   @include desktop {
     background-size: 70px 97px;
     width: 70px;
     height: 97px;
-    top: -7px;
-    left: 20px;
+    top: -6px;
+    left: 15px;
   }
 }
 
@@ -171,8 +184,8 @@
   background-image: url("../../icons/stack.svg#icon-cat-pro");
   background-repeat: no-repeat;
   background-size: 67px 28px;
-  top: 40px;
-  left: 10px;
+  top: 12px;
+  left: -8px;
   position: absolute;
   width: 67px;
   height: 28px;
@@ -181,14 +194,15 @@
     background-size: 268px 112px;
     width: 268px;
     height: 112px;
-    left: -36px;
+    left: -35px;
+    top: 43px;
   }
 
   @include desktop {
     background-size: 134px 56px;
     width: 134px;
     height: 56px;
-    top: 25px;
-    left: -15px;
+    top: 20px;
+    left: -17px;
   }
 }

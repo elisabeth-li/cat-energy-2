@@ -17,20 +17,23 @@
 <body class="page">
   <header class="header header--background">
     <div class="header__top">
-      <a class="header__logo" href="#">
-        <picture>
-          <source media="(min-width: 1440px)" width="202" height="59" type="image/svg+xml" srcset="images/logo/logo-cat-energy-desktop.svg">
-          <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="images/logo/logo-cat-energy-tablet.svg">
-          <img class="header__logo-img" src="images/logo/logo-cat-energy-mobile.svg" alt="Логотип Cat Energy" width="33" height="38">
-        </picture>
-      </a>
-      <a class="header__name" href="#">
-        <picture>
-          <img class="header__name-img" src="images/logo/logo-cat-energy-text-mobile.svg" alt="Логотип Cat Energy" width="101" height="18">
-        </picture>
-      </a>
-      <nav class="header__nav nav">
+      <div class="header__logo-container">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" width="202" height="59" type="image/svg+xml" srcset="images/logo/logo-cat-energy-desktop.svg">
+            <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="images/logo/logo-cat-energy-tablet.svg">
+            <img class="header__logo-img" src="images/logo/logo-cat-energy-mobile.svg" alt="Логотип Cat Energy" width="33" height="38">
+          </picture>
+        </a>
+        <a class="header__name" href="index.html">
+          <picture>
+            <img class="header__name-img" src="images/logo/logo-cat-energy-text-mobile.svg" alt="Логотип Cat Energy" width="101" height="18">
+          </picture>
+        </a>
+      </div>
+      <nav class="header__nav nav nav--nojs">
         <button class="nav__toggle" type="button" aria-label="Переключатель меню">
+          <span></span>
         </button>
         <div class="nav__wrapper">
           <ul class="nav__list">
@@ -130,24 +133,33 @@
         </div>
 
         <div class="example__slider slider">
-          <div class="slider__images">
-            <picture>
-              <source media="(min-width: 1440px)" width="560" height="512" type="image/png" srcset="images/example/example-before-tablet@1x.png 1x, images/example/example-before-tablet@2x.png 2x">
-              <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/example/example-before-tablet@1x.png 1x, images/example/example-before-tablet@2x.png 2x">
-              <img class="slider__image slider__image--before" width="280" height="256" src="images/example/example-before-mobile@1x.png" srcset="images/example/example-before-mobile@2x.png 2x" alt="Толстый кот">
-            </picture>
-          </div>
+          <picture>
+            <source media="(min-width: 1440px)" width="560" height="512" type="image/png" srcset="images/example/example-before-tablet@1x.png 1x, images/example/example-before-tablet@2x.png 2x">
+            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/example/example-before-tablet@1x.png 1x, images/example/example-before-tablet@2x.png 2x">
+            <img class="slider__image slider__image--before" width="280" height="256" src="images/example/example-before-mobile@1x.png" srcset="images/example/example-before-mobile@2x.png 2x" alt="Толстый кот">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" width="560" height="512" type="image/png" srcset="images/example/example-after-tablet@1x.png 1x, images/example/example-after-tablet@2x.png 2x">
+            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/example/example-after-tablet@1x.png 1x, images/example/example-after-tablet@2x.png 2x">
+            <img class="slider__image slider__image--after" width="280" height="256" src="images/example/example-after-mobile@1x.png" srcset="images/example/example-after-mobile@2x.png 2x" alt="Похудевший кот">
+          </picture>
+          <label class="visually-hidden" for="slider__range">Показать картинку до или после</label>
+          <label class="visually-hidden" for="slider-range">Показать картинку до или после</label>
+          <input class="slider__range-js" name="example-slider-range" type="range" min="0" max="100" value="50" step="1" id="slider-range">
+          <div class="slider__range-visible"></div>
         </div>
       </div>
     </section>
 
     <section class="contacts">
-      <h2 class="visually-hidden">Карта и контактная информация</h2>
-      <div class="contacts__info contacts__info--bg">
-        <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-        <p class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
-        </p>
+      <div class="contacts-wrapper">
+        <h2 class="visually-hidden">Карта и контактная информация</h2>
+        <div class="contacts__info">
+          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <p class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
+          </p>
+        </div>
       </div>
       <div class="contacts__map">
         <picture>
@@ -189,6 +201,8 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/burger.js"></script>
+  <!-- <script src="scripts/slider.js"></script> -->
 </body>
 
 </html>

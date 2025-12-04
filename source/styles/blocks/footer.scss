@@ -1,23 +1,26 @@
+.footer {
+  background-color: $light-grey;
+}
+
 .footer__wrapper {
   @include container;
   display: flex;
   align-items: center;
-  background-color: $light-grey;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding: 20px;
   flex-direction: column;
   gap: 20px;
 
 
   @include tablet {
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 40px;
+    padding-top: 45px;
     flex-direction: row;
   }
 
   @include desktop {
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-top: 67px;
+    padding-bottom: 53px;
+    align-items: flex-start;
   }
 }
 
@@ -25,10 +28,15 @@
   border-bottom: 1px solid $grey-logo;
   margin: 0;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
 
   @include tablet {
     border-bottom: none;
+    padding-bottom: 14px;
+  }
+
+  @include desktop {
+    padding-top: 0;
   }
 }
 
@@ -39,12 +47,15 @@
 
 .footer__social {
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
+  padding-top: 2px;
   border-bottom: 1px solid $grey-logo;
 
   @include tablet {
     border-bottom: none;
     padding-bottom: 0;
+    max-width: 95px;
+    gap: 22px;
   }
 }
 

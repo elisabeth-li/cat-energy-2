@@ -10,6 +10,7 @@
     line-height: 20px;
     grid-template-columns: 1fr;
     padding: 30px 37px 40px;
+    background: linear-gradient(to bottom, $basic-white 17.85%, $light-grey 17.85%);
   }
 
   @include desktop {
@@ -22,7 +23,7 @@
   text-decoration: none;
 
   @include tablet {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
   }
 }
 
@@ -30,6 +31,10 @@
   display: grid;
   align-self: end;
   margin-bottom: 12px;
+
+  @include tablet {
+    margin-bottom: 17px;
+  }
 }
 
 .card__title {
@@ -79,6 +84,11 @@
   }
 }
 
+.card__img {
+  @include tablet {
+    height: 207px;
+  }
+}
 
 .card__criterion {
   text-align: left;
@@ -109,10 +119,16 @@
   @include tablet {
     display: grid;
     border: 1px solid $border-grey;
+    background: $basic-white;
+    min-height: 429px;
   }
 
   .card__info-wrapper {
     align-self: auto;
+
+    @include tablet {
+      padding: 32px 40px 0;
+    }
   }
 
   .card__title {
@@ -123,14 +139,25 @@
     @include subtitle;
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 8px;
     text-align: center;
+    margin-bottom: 0;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   .card__text {
     font-size: 12px;
     line-height: 16px;
     margin: 0 0 21px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 18px;
+      margin-top: 23px;
+    }
   }
 
   .card__button {
@@ -160,6 +187,6 @@
     height: 60px;
     mask-size: 60px 60px;
     margin: 0 auto;
-    padding: 30px 37px 40px;
+    padding: 80px 37px 6px;
   }
 }

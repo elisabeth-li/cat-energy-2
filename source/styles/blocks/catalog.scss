@@ -18,7 +18,7 @@
   }
 
   @include desktop {
-    margin-bottom: 84px;
+    padding-top: 68px;
   }
 }
 
@@ -34,7 +34,8 @@
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    gap: 30px 60px;
+    align-items: end;
   }
 
   @include desktop {

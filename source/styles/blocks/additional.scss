@@ -29,7 +29,8 @@
   margin-bottom: 36px;
 
   @include tablet {
-    margin-bottom: 80px;
+    margin-bottom: 67px;
+    padding-left: 40px;
   }
 
   @include desktop {
@@ -48,9 +49,10 @@
   margin-bottom: 47px;
 
   @include tablet {
-    border-top: none;
     gap: 0;
     margin-bottom: 70px;
+    border: 1px solid #cdcdcd;
+    padding: 0;
   }
 
   @include desktop {
@@ -68,7 +70,8 @@
   border-bottom: 1px solid $border-grey;
 
   @include tablet {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
+    gap: 23px 52px;
     border: 1px solid $border-grey;
     border-left: 0;
     border-right: 0;
@@ -89,12 +92,17 @@
   line-height: 16px;
   grid-column: -1 / 1;
 
-  @include desktop {
+  @include tablet {
     grid-column: 1;
   }
 }
 
 .additional__quantity {
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   @include desktop {
     grid-column: 2;
   }
@@ -104,6 +112,11 @@
   @include button;
   grid-column: -1 / 1;
 
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   @include desktop {
     grid-column: 4;
   }
@@ -111,6 +124,11 @@
 
 .additional__price {
   text-align: right;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
 
   @include desktop {
     text-align: left;

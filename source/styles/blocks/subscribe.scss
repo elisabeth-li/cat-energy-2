@@ -1,6 +1,6 @@
 .subscribe__wrapper {
   @include container;
-  padding-top: 40px;
+  padding-top: 32px;
   padding-bottom: 40px;
 
   @include tablet {
@@ -41,7 +41,7 @@
 
 .subscribe__form {
   display: grid;
-  gap: 16px;
+  gap: 10px;
 
 
   @include tablet {
@@ -55,7 +55,7 @@
   @include subtitle;
   color: $dark-grey;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 12px;
   border: 1px solid $border-grey;
   width: 100%;
   font-size: 20px;

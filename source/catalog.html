@@ -16,22 +16,30 @@
 <body class="page">
   <header class="header">
     <div class="header__top">
-      <a class="header__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1440px)" width="202" height="59" type="image/svg+xml" srcset="images/logo/logo-cat-energy-desktop.svg">
-          <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="images/logo/logo-cat-energy-tablet.svg">
-          <img class="header__logo-img" src="images/logo/logo-cat-energy-mobile.svg" alt="Логотип Cat Energy" width="33" height="38">
-        </picture>
-      </a>
-      <nav class="header__nav nav">
+      <div class="header__logo-container">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" width="202" height="59" type="image/svg+xml" srcset="images/logo/logo-cat-energy-desktop.svg">
+            <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="images/logo/logo-cat-energy-tablet.svg">
+            <img class="header__logo-img" src="images/logo/logo-cat-energy-mobile.svg" alt="Логотип Cat Energy" width="33" height="38">
+          </picture>
+        </a>
+        <a class="header__name" href="index.html">
+          <picture>
+            <img class="header__name-img" src="images/logo/logo-cat-energy-text-mobile.svg" alt="Логотип Cat Energy" width="101" height="18">
+          </picture>
+        </a>
+      </div>
+      <nav class="header__nav nav nav--nojs">
         <button class="nav__toggle" type="button" aria-label="Переключатель меню">
+          <span></span>
         </button>
         <div class="nav__wrapper">
           <ul class="nav__list">
-            <li class="nav__item">
+            <li class="nav__item nav__item--active">
               <a class="nav__link" href="index.html">Главная</a>
             </li>
-            <li class="nav__item nav__item--active">
+            <li class="nav__item">
               <a class="nav__link" href="#">Каталог продукции</a>
             </li>
             <li class="nav__item">
@@ -58,7 +66,7 @@
             </a>
             <div class="card__info-wrapper">
               <a class="card__link" href="#">
-                <h2 class="card__title">Cat Energy Pro<br> 500 г</h2>
+                <h2 class="card__title">Cat Energy Pro 500 г</h2>
               </a>
               <ul class="card__info">
                 <li class="card__item">
@@ -88,7 +96,7 @@
             </a>
             <div class="card__info-wrapper">
               <a class="card__link" href="#">
-                <h2 class="card__title">Cat Energy Pro<br>1000 г</h2>
+                <h2 class="card__title">Cat Energy Pro 1000 г</h2>
               </a>
               <ul class="card__info">
                 <li class="card__item">
@@ -118,7 +126,7 @@
             </a>
             <div class="card__info-wrapper">
               <a class="card__link" href="#">
-                <h2 class="card__title">Cat Energy Pro<br> 500 г</h2>
+                <h2 class="card__title">Cat Energy Pro 500 г</h2>
               </a>
               <ul class="card__info">
                 <li class="card__item">
@@ -148,7 +156,7 @@
             </a>
             <div class="card__info-wrapper">
               <a class="card__link" href="#">
-                <h2 class="card__title">Cat Energy Pro<br>1000 г</h2>
+                <h2 class="card__title">Cat Energy Pro 1000 г</h2>
               </a>
               <ul class="card__info">
                 <li class="card__item">
@@ -178,7 +186,7 @@
             </a>
             <div class="card__info-wrapper">
               <a class="card__link" href="#">
-                <h2 class="card__title">Cat Energy Slim<br>500 г</h2>
+                <h2 class="card__title">Cat Energy Slim 500 г</h2>
               </a>
               <ul class="card__info">
                 <li class="card__item">
@@ -208,7 +216,7 @@
             </a>
             <div class="card__info-wrapper">
               <a class="card__link" href="#">
-                <h2 class="card__title">Cat Energy Slim<br>1000 г</h2>
+                <h2 class="card__title">Cat Energy Slim 1000 г</h2>
               </a>
               <ul class="card__info">
                 <li class="card__item">
@@ -238,7 +246,7 @@
             </a>
             <div class="card__info-wrapper">
               <a class="card__link" href="#">
-                <h2 class="card__title">Cat Energy Slim<br>500 г</h2>
+                <h2 class="card__title">Cat Energy Slim 500 г</h2>
               </a>
               <ul class="card__info">
                 <li class="card__item">
@@ -323,12 +331,14 @@
     </section>
 
     <section class="contacts">
-      <h2 class="visually-hidden">Карта и контактная информация</h2>
-      <div class="contacts__info contacts__info--bg">
-        <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-        <p class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
-        </p>
+      <div class="contacts-wrapper">
+        <h2 class="visually-hidden">Карта и контактная информация</h2>
+        <div class="contacts__info contacts__info--bg">
+          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <p class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
+          </p>
+        </div>
       </div>
       <div class="contacts__map">
         <picture>
@@ -370,6 +380,7 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/burger.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
 
 .steps__wrapper {
   @include container;
+  padding-top: 4px;
   padding-bottom: 49px;
 
   @include tablet {
@@ -21,7 +22,11 @@
 
 .steps__title {
   @include main-title;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
 }
 
 .steps__list {
@@ -34,12 +39,13 @@
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
-    gap: 37px;
+    gap: 37px 59px;
   }
+
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
-    gap: 70px;
+    gap: 77px;
   }
 }
 
@@ -76,7 +82,7 @@
   @include tablet {
     width: 80px;
     height: 80px;
-    margin-top: 40px;
+    margin-top: 38px;
     padding-right: 0;
   }
 }

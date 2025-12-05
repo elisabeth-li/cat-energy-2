@@ -9,10 +9,16 @@
 
 .catalog__title {
   @include main-title;
-  margin-bottom: 41px;
+  padding: 25px 0 41px;
+  margin: 0;
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
 
   @include desktop {
-    margin-bottom: 84px;
+    padding-top: 68px;
   }
 }
 
@@ -23,12 +29,13 @@
   max-width: 100%;
   gap: 25px;
   margin: 0;
-  padding: 0;
+  padding: 20px 0 0;
   list-style: none;
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    gap: 30px 60px;
+    align-items: end;
   }
 
   @include desktop {

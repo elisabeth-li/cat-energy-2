@@ -1,10 +1,23 @@
+.subscribe {
+  @include container;
+  padding-top: 40px;
+
+  @include tablet {
+    padding-top: 80px;
+  }
+
+  @include desktop {
+    padding-top: 96px;
+  }
+}
+
 .subscribe__wrapper {
   @include container;
   padding-top: 32px;
   padding-bottom: 40px;
 
   @include tablet {
-    padding: 80px 68px;
+    padding: 0 68px;
   }
 
   @include desktop {
@@ -15,9 +28,16 @@
 .subscribe__title {
   @include title;
   margin-bottom: 32px;
+  position: relative;
+  padding-right: 40px;
+  background: $basic-white;
+  max-width: fit-content;
+
+  // @include title-line;
 
   @include tablet {
     margin-bottom: 66px;
+    padding-left: 40px;
   }
 
   @include desktop {

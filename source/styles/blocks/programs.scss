@@ -113,8 +113,21 @@
     font-size: 20px;
     line-height: 100%;
   }
-}
 
+  &:active {
+    opacity: 0.1;
+
+    &::after {
+      transform: translateX(8px);
+    }
+  }
+
+  &:hover {
+    &::after {
+      transform: translateX(8px);
+    }
+  }
+}
 
 .programs__link--more::after {
   content: "";
@@ -123,8 +136,9 @@
   background-color: $basic-dark;
 
   mask: url("../../icons/stack.svg#icon-arrow") center/contain no-repeat;
-}
 
+  transition: transform 0.2s ease;
+}
 
 .programs__item-icon {
   content: "";

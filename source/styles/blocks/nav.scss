@@ -65,7 +65,7 @@
 .nav__wrapper {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 64px;
   left: 0;
   right: 0;
   background-color: $basic-white;
@@ -155,5 +155,9 @@
   @include tablet {
     border-bottom: 2px solid $basic-green;
     padding: 7px 0;
+  }
+
+  @include desktop {
+    border-bottom: 2px solid $basic-white;
   }
 }

@@ -1,4 +1,6 @@
 .additional {
+  @include container;
+  position: relative;
   font-size: 14px;
   line-height: 14px;
 
@@ -9,9 +11,6 @@
 }
 
 .additional__wrapper {
-  @include container;
-  padding: 8px 20px;
-
   @include tablet {
     display: block;
   }
@@ -27,15 +26,23 @@
 .additional__title {
   @include title;
   margin-bottom: 36px;
+  position: relative;
+  padding-right: 40px;
+
+  @include title-line;
+  max-width: 100%;
+
 
   @include tablet {
-    margin-bottom: 67px;
+    padding-right: 40px;
     padding-left: 40px;
+
+    margin-bottom: 67px;
   }
 
   @include desktop {
-    grid-column: 1/-1;
     margin-bottom: 80px;
+    padding-left: 0;
   }
 }
 
@@ -47,6 +54,7 @@
   gap: 21px;
   padding-top: 13px;
   margin-bottom: 47px;
+  border-top: 1px solid #cdcdcd;
 
   @include tablet {
     gap: 0;
@@ -66,7 +74,7 @@
   gap: 13px;
   align-items: center;
   color: $dark-grey;
-  padding: 6px 0;
+  padding: 6px 0 19px;
   border-bottom: 1px solid $border-grey;
 
   @include tablet {

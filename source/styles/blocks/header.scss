@@ -2,7 +2,7 @@
   @include container;
   font-family: $secondary-font;
   padding-top: 13px;
-  border-bottom: 1px solid $border-grey;
+  border-bottom: 1px solid $grey-border-light;
 
   @include tablet {
     padding-top: 25px;
@@ -96,8 +96,9 @@
   }
 
   @include desktop {
-    .nav__link {
+    .nav__item--active .nav__link {
       color: $basic-white;
+      border-bottom: 2px solid $basic-white;
     }
   }
 }
@@ -256,5 +257,17 @@
 
   @include tablet {
     display: none;
+  }
+}
+
+.header__logo {
+  transition: opacity 0.25s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

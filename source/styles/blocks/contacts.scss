@@ -6,16 +6,28 @@
   }
 }
 
+.contacts-wrapper--bg-color {
+  background-color: $light-grey;
+
+  .contacts__info {
+    background-color: $light-grey;
+
+    @include desktop {
+      background-color: $basic-white;
+    }
+  }
+}
 
 .contacts__info {
   align-items: center;
   padding: 26px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: $basic-white;
+
 
   @include tablet {
     padding: 60px 70px;
-    background-color: $basic-white;
     gap: 30px;
     margin: 0 auto;
     max-width: 768px;
@@ -28,7 +40,7 @@
     position: absolute;
     left: 110px;
     top: 95px;
-    z-index: 3;
+    z-index: 2;
   }
 }
 
@@ -38,10 +50,9 @@
 
 .contacts__map-wrapper-img {
   height: 362px;
-  overflow: hidden;
   text-align: center;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 
   @include tablet {
     height: 400px;

@@ -1,20 +1,30 @@
+.example {
+  background-color: $bg-grey;
+
+  @include tablet {
+    background: linear-gradient(to bottom, $basic-white 58%, $bg-grey 42%);
+  }
+
+  @include desktop {
+    background: $basic-white;
+  }
+}
+
 .example__wrapper {
   @include container;
   padding-top: 25px;
   padding-bottom: 40px;
-  background-color: $bg-grey;
+
 
   @include tablet {
     display: flex;
     flex-direction: column;
     padding-bottom: 101px;
-    background: linear-gradient(to bottom, $basic-white 58%, $bg-grey 42%);
   }
 
   @include desktop {
     position: relative;
     flex-wrap: wrap;
-    background: $basic-white;
     padding-bottom: 0;
   }
 }
@@ -92,7 +102,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid $border-grey;
+  border: 1px solid $grey-border-light;
   width: 100%;
   min-height: 56px;
 
@@ -265,6 +275,8 @@
   opacity: 0;
   inset: 0;
   z-index: 2;
+  transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+
 
   &:hover {
     cursor: col-resize;

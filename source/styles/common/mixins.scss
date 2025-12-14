@@ -36,7 +36,6 @@
   }
 }
 
-
 @mixin main-title {
   font-family: $secondary-font;
   font-weight: 400;
@@ -104,10 +103,20 @@
   padding: 10px 63px;
   font-size: 16px;
   line-height: 20px;
+  transition: background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
 
   @include tablet {
     font-size: 20px;
     line-height: 26px;
+  }
+
+  &:hover {
+    background: $light-green;
+  }
+
+  &:active {
+    background: $light-green;
+    opacity: 0.3;
   }
 }
 
@@ -115,6 +124,15 @@
   @include button;
   background-color: $light-grey;
   color: $grey;
+  transition: background-color 0.25s ease-in-out;
+
+  &:hover {
+    background: $basic-border;
+  }
+
+  &:active {
+    background: $basic-border;
+  }
 }
 
 @mixin underline {
@@ -136,60 +154,42 @@
 
 @mixin title-line {
   position: relative;
-  display: inline-block;
-  background-color: $basic-white;
+  width: 100%;
+  display: flex;
+  align-items: center;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: 100%;
-    width: calc(100vw - 100% - 20px);
+    left: 0;
+    width: 100%;
     height: 2px;
     background-color: $basic-green;
     transform: translateY(-50%);
     z-index: -1;
   }
+}
 
-  @include tablet {
-    &::after {
-      width: calc(100vw - 100% - 30px);
+@mixin full-width-line($top-mobile:10px, $top-tablet:16px, $top-desktop:20px) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top-mobile;
+    left: 0;
+    width: 100vw;
+    height: 2px;
+    z-index: -1;
+    background-color: $basic-green;
+
+    @include tablet {
+      top: $top-tablet;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      width: 100vw;
-      height: 2px;
-      background-color: $basic-green;
-      transform: translateY(-50%);
-      z-index: -1;
-    }
-  }
-
-  @include desktop {
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: calc(100vw - 100% - 110px);
-      height: 2px;
-      background-color: $basic-green;
-      transform: translateY(-50%);
-      z-index: -1;
-    }
-
-    &::before {
-      right: 100%;
-      margin-right: 40px;
-    }
-
-    &::after {
-      left: 100%;
-      margin-left: 40px;
+    @include desktop {
+      top: $top-desktop;
     }
   }
 }

@@ -1,11 +1,9 @@
 .additional {
-<<<<<<< HEAD
   @include full-width-line();
 
   display: block;
-=======
+  position: relative;
   @include container;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   position: relative;
   font-size: 14px;
   line-height: 14px;
@@ -29,7 +27,6 @@
   }
 }
 
-<<<<<<< HEAD
 .additional__title-wrapper {
   @include container;
   position: relative;
@@ -54,34 +51,21 @@
   @include tablet {
     margin-bottom: 82px;
     padding-left: 40px;
-=======
-.additional__title {
-  @include title;
-  margin-bottom: 36px;
-  position: relative;
-  padding-right: 40px;
-
-  @include title-line;
-  max-width: 100%;
-
-
-  @include tablet {
     padding-right: 40px;
     padding-left: 40px;
 
     margin-bottom: 67px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {
     margin-bottom: 80px;
+    padding-left: 0;
     padding-left: 0;
   }
 }
 
 .additional__list {
   display: grid;
-<<<<<<< HEAD
   gap: 7px;
   margin: 0 0 35px;
   padding: 13px 0 0;
@@ -93,18 +77,8 @@
     margin-bottom: 70px;
     padding: 0;
     border: 1px solid $grey-border-light;
-=======
-  gap: 21px;
-  padding-top: 13px;
-  margin-bottom: 47px;
-  border-top: 1px solid #cdcdcd;
-
-  @include tablet {
-    gap: 0;
-    margin-bottom: 70px;
     border: 1px solid #cdcdcd;
     padding: 0;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {
@@ -117,25 +91,17 @@
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 13px;
+  gap: 13px;
   align-items: center;
   padding: 6px 0 19px;
   border-bottom: 1px solid $grey-border-light;
   color: $dark-grey;
-<<<<<<< HEAD
-=======
-  padding: 6px 0 19px;
-  border-bottom: 1px solid $border-grey;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     grid-template-columns: 1fr auto auto;
     gap: 23px 52px;
-<<<<<<< HEAD
     padding: 25px 38px;
     border: 1px solid $grey-border-light;
-=======
-    border: 1px solid $border-grey;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
     border-left: 0;
     border-right: 0;
   }
@@ -154,11 +120,17 @@
   line-height: 16px;
 
   @include tablet {
+  @include tablet {
     grid-column: 1;
   }
 }
 
 .additional__quantity {
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   @include tablet {
     font-size: 16px;
     line-height: 20px;
@@ -178,6 +150,11 @@
     line-height: 20px;
   }
 
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   @include desktop {
     grid-column: 4;
   }
@@ -185,6 +162,11 @@
 
 .additional__price {
   text-align: right;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
 
   @include tablet {
     font-size: 16px;
@@ -202,6 +184,7 @@
   display: flex;
   min-height: 100px;
   height: 290px;
+  padding: 60px 20px 43px;
   padding: 60px 20px 43px;
   background-repeat: no-repeat;
   background-position: center;

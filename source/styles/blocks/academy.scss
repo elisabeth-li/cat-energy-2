@@ -6,7 +6,6 @@
   font-size: 16px;
   text-decoration: none;
   color: $dark-grey;
-<<<<<<< HEAD
   transition: opacity 0.25s ease-in-out;
 
   @include tablet {
@@ -35,19 +34,6 @@
   &:active {
     opacity: 0.3;
   }
-=======
-
-  @include tablet {
-    gap: 24px;
-  }
-}
-
-.academy__text {
-  font-family: $primary-font;
-  font-size: 16px;
-
-  margin-right: auto;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 }
 
 .academy__logo {

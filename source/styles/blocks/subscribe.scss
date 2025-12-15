@@ -1,23 +1,57 @@
-.subscribe__wrapper {
-  @include container;
-  padding-top: 32px;
-  padding-bottom: 40px;
+.subscribe {
+  @include full-width-line(50px, 96px, 116px);
+  padding-top: 40px;
+
+  display: block;
+  position: relative;
 
   @include tablet {
-    padding: 80px 68px;
+    padding-top: 80px;
   }
 
   @include desktop {
-    padding: 96px 110px 104px;
+    padding-top: 96px;
+  }
+}
+
+.subscribe__wrapper {
+  @include container;
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding: 0 68px 80px;
+  }
+
+  @include desktop {
+    padding: 0 110px 104px;
+  }
+}
+
+.subscribe__title-wrapper {
+  position: relative;
+
+  @include container;
+  padding: 0;
+
+  @include tablet {
+    padding: 0 30px;
+  }
+
+  @include desktop {
+    padding: 0  70px;
   }
 }
 
 .subscribe__title {
   @include title;
+  padding: 0 40px 0 20px;
+  display: inline-block;
   margin-bottom: 32px;
+  background: $basic-white;
 
   @include tablet {
     margin-bottom: 66px;
+    padding-left: 40px;
   }
 
   @include desktop {
@@ -56,8 +90,9 @@
   color: $dark-grey;
   box-sizing: border-box;
   padding: 12px;
-  border: 1px solid $border-grey;
+  border: 1px solid $grey-border-light;
   width: 100%;
+  height: 100%;
   font-size: 20px;
   line-height: 100%;
 
@@ -86,6 +121,10 @@
   @include tablet {
     padding-bottom: 12px;
     min-width: 256px;
+    max-width: 300px;
+  }
+
+  @include desktop {
     max-width: 512px;
   }
 }

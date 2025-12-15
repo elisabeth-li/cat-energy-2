@@ -5,6 +5,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-bottom: 21px;
+  position: relative;
+
+  @include underline;
+
 
   @include tablet {
     line-height: 20px;
@@ -17,6 +21,7 @@
     justify-content: center;
   }
 }
+
 
 .card__link {
   color: $grey;
@@ -106,87 +111,5 @@
   @include tablet {
     font-size: 16px;
     line-height: 20px;
-  }
-}
-
-.card--more {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 0;
-
-
-  @include tablet {
-    display: grid;
-    border: 1px solid $border-grey;
-    background: $basic-white;
-    min-height: 429px;
-  }
-
-  .card__info-wrapper {
-    align-self: auto;
-
-    @include tablet {
-      padding: 32px 40px 0;
-    }
-  }
-
-  .card__title {
-    color: $light-dark;
-    max-width: 100%;
-    padding: 0;
-
-    @include subtitle;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    margin-bottom: 0;
-
-    @include tablet {
-      font-size: 20px;
-      line-height: 24px;
-    }
-  }
-
-  .card__text {
-    font-size: 12px;
-    line-height: 16px;
-    margin: 0 0 21px;
-
-    @include tablet {
-      font-size: 16px;
-      line-height: 18px;
-      margin-top: 23px;
-    }
-  }
-
-  .card__button {
-    @include button--secondary;
-    width: 100%;
-    margin-top: auto;
-
-    @include desktop {
-      padding: 10px 0;
-    }
-  }
-}
-
-.card--more::before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background-color: $grey-icon;
-  mask-image: url("../../icons/stack.svg#icon-plus");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 30px 30px;
-  margin-bottom: 27px;
-
-  @include tablet {
-    width: 60px;
-    height: 60px;
-    mask-size: 60px 60px;
-    margin: 0 auto;
-    padding: 80px 37px 6px;
   }
 }

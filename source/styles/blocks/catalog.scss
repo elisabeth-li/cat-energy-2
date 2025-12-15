@@ -11,6 +11,9 @@
   @include main-title;
   padding: 25px 0 41px;
   margin: 0;
+  position: relative;
+
+  @include underline;
 
   @include tablet {
     padding-top: 60px;

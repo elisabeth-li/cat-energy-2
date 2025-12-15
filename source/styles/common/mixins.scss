@@ -36,7 +36,6 @@
   }
 }
 
-
 @mixin main-title {
   font-family: $secondary-font;
   font-weight: 400;
@@ -89,7 +88,7 @@
 }
 
 @mixin button {
-  display: inline-block;
+  display: block;
   background: $basic-green;
   color: $basic-white;
   font-weight: 400;
@@ -104,10 +103,20 @@
   padding: 10px 63px;
   font-size: 16px;
   line-height: 20px;
+  transition: background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
 
   @include tablet {
     font-size: 20px;
     line-height: 26px;
+  }
+
+  &:hover {
+    background: $light-green;
+  }
+
+  &:active {
+    background: $light-green;
+    opacity: 0.3;
   }
 }
 
@@ -115,4 +124,72 @@
   @include button;
   background-color: $light-grey;
   color: $grey;
+  transition: background-color 0.25s ease-in-out;
+
+  &:hover {
+    background: $basic-border;
+  }
+
+  &:active {
+    background: $basic-border;
+  }
+}
+
+@mixin underline {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background: $basic-border;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+@mixin title-line {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $basic-green;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}
+
+@mixin full-width-line($top-mobile:10px, $top-tablet:16px, $top-desktop:20px) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top-mobile;
+    left: 0;
+    width: 100vw;
+    height: 2px;
+    z-index: -1;
+    background-color: $basic-green;
+
+    @include tablet {
+      top: $top-tablet;
+    }
+
+    @include desktop {
+      top: $top-desktop;
+    }
+  }
 }

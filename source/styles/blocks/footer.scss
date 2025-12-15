@@ -29,6 +29,8 @@
   margin: 0;
   padding-top: 20px;
   padding-bottom: 12px;
+  transition: opacity 0.25s ease-in-out;
+
 
   @include tablet {
     border-bottom: none;
@@ -38,7 +40,16 @@
   @include desktop {
     padding-top: 0;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
+
 
 .footer__logo-img {
   width: 128px;

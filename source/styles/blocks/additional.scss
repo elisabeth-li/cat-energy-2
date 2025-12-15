@@ -1,4 +1,8 @@
 .additional {
+  @include full-width-line();
+
+  display: block;
+  position: relative;
   font-size: 14px;
   line-height: 14px;
 
@@ -10,7 +14,6 @@
 
 .additional__wrapper {
   @include container;
-  padding: 8px 20px;
 
   @include tablet {
     display: block;
@@ -24,17 +27,36 @@
   }
 }
 
-.additional__title {
-  @include title;
-  margin-bottom: 36px;
+.additional__title-wrapper {
+  position: relative;
+
+  @include container;
+  padding: 0;
 
   @include tablet {
-    margin-bottom: 67px;
-    padding-left: 40px;
+    padding: 0 30px;
   }
 
   @include desktop {
-    grid-column: 1/-1;
+    padding: 0  70px;
+  }
+}
+
+.additional__title {
+  @include title;
+  padding: 0 40px 0 20px;
+  margin-bottom: 36px;
+  display: inline-block;
+  background-color: $basic-white;
+
+  @include tablet {
+    padding-right: 40px;
+    padding-left: 40px;
+
+    margin-bottom: 67px;
+  }
+
+  @include desktop {
     margin-bottom: 80px;
   }
 }
@@ -47,6 +69,7 @@
   gap: 21px;
   padding-top: 13px;
   margin-bottom: 47px;
+  border-top: 1px solid #cdcdcd;
 
   @include tablet {
     gap: 0;
@@ -57,6 +80,7 @@
 
   @include desktop {
     margin: 0;
+    border: none;
   }
 }
 
@@ -66,13 +90,13 @@
   gap: 13px;
   align-items: center;
   color: $dark-grey;
-  padding: 6px 0;
-  border-bottom: 1px solid $border-grey;
+  padding: 6px 0 19px;
+  border-bottom: 1px solid $grey-border-light;
 
   @include tablet {
     grid-template-columns: 1fr auto auto;
     gap: 23px 52px;
-    border: 1px solid $border-grey;
+    border: 1px solid $grey-border-light;
     border-left: 0;
     border-right: 0;
     padding: 25px 38px;
@@ -82,7 +106,6 @@
     grid-template-columns: 280px 1fr 1fr 244px;
     gap: 35px;
     padding: 15px 0;
-    border: none;
   }
 }
 

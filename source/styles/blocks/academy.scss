@@ -4,20 +4,42 @@
   gap: 12px;
   text-decoration: none;
   color: $dark-grey;
+  transition: opacity 0.25s ease-in-out;
+
 
   @include tablet {
     gap: 24px;
   }
+
+
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    background-color: $dark-grey;
+    mask-image: url("/images/logo/logo-html-academy.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 27px 34px;
+    transition: background-color 0.25s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.academy__text {
+
+.academy__logo {
   font-family: $primary-font;
   font-size: 16px;
 
   margin-right: auto;
-}
-
-.academy__logo {
-  width: 27px;
-  height: 34px;
 }

@@ -1,7 +1,8 @@
 .header {
+  @include container;
   font-family: $secondary-font;
   padding-top: 13px;
-  margin-bottom: 27px;
+  border-bottom: 1px solid $border-grey;
 
   @include tablet {
     padding-top: 25px;
@@ -9,19 +10,39 @@
   }
 
   @include desktop {
-    padding-top: 55px;
-    margin-bottom: 82px;
+    padding: 55px 0 0;
+    margin-bottom: 0;
   }
 }
 
 .header__top {
-  @include container;
   display: flex;
   align-items: center;
+  padding-bottom: 9px;
+
+  @include tablet {
+    padding-bottom: 0;
+  }
+
+  @include desktop {
+    @include container;
+  }
 }
 
+.header__logo-container {
+  align-items: center;
+  display: flex;
+  width: 100%;
+
+  @include tablet {
+    gap: 13px;
+    flex-grow: 1;
+    width: max-content;
+  }
+}
+
+
 .header__hero-wrapper {
-  @include container;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,22 +63,43 @@
 .header__hero {
   position: relative;
   margin-bottom: 20px;
-  margin-top: 27px;
+  margin-top: 25px;
   text-align: center;
 
   @include tablet {
-    padding: 50px 0 80px;
+    padding: 60px 0 75px;
     position: relative;
     text-align: left;
+    margin: 0;
   }
 
   @include desktop {
-    padding: 80px 0 100px;
+    margin: 0;
+    padding: 105px 60px 0;
   }
 }
 
 .header--background {
   position: relative;
+
+  .header__hero-title,
+  .header__hero-subtitle {
+    color: $basic-white;
+  }
+
+
+  @include tablet {
+    .header__hero-title,
+    .header__hero-subtitle {
+      color: $basic-dark;
+    }
+  }
+
+  @include desktop {
+    .nav__link {
+      color: $basic-white;
+    }
+  }
 }
 
 .header--background::after {
@@ -72,13 +114,12 @@
   position: absolute;
   top: 65px;
   right: 0;
-  background-size: 320px 302px;
+  background-size: 100% auto;
 
   @media (min-resolution: 2dppx) {
     background-image:
       linear-gradient($overlay-green),
       url("/images/background-image/hero-bc-mobile@2x.jpg");
-    background-size: 320px 302px;
   }
 
   @include tablet {
@@ -106,24 +147,26 @@
 }
 
 .header__hero-content {
-  margin-bottom: 20px;
+  max-width: 100%;
 
   @include tablet {
     max-width: 100%;
     margin: 0;
-    height: 500px;
+    min-height: 734px;
     padding: 0 90px;
   }
 
   @include desktop {
     max-width: 50%;
     padding: 0 80px;
+    padding-bottom: 56px;
+    min-height: 525px;
   }
 }
 
 .header__hero-title {
   @include main-title;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   @include tablet {
     margin-bottom: 40px;
@@ -146,12 +189,19 @@
 .header__hero-button {
   @include button;
   position: absolute;
-  left: 7%;
-  bottom: 4%;
+  transform: translateX(-50%);
+  width: 100%;
+  left: 50%;
+  bottom: 0;
+
 
   @include tablet {
-    padding: 14px 24px;
+    display: inline-block;
+    padding: 14px 26px;
     position: inherit;
+    width: auto;
+    left: 0;
+    transform: translateX(0);
   }
 }
 
@@ -160,7 +210,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding-bottom: 22%;
+  padding-bottom: 37px;
 
   @include tablet {
     position: absolute;
@@ -168,7 +218,7 @@
     text-align: center;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -5px;
     margin: 0 auto;
     padding: 0;
   }
@@ -178,9 +228,7 @@
     z-index: 1;
     max-width: 552px;
     text-align: center;
-    left: 220px;
-    right: 0;
-    bottom: auto;
+    inset: 24px 0 auto 226px;
     margin: 0 auto;
   }
 }
@@ -190,7 +238,7 @@
   height: auto;
 
   @include tablet {
-    width: 400px;
+    width: 709px;
   }
 
   @include desktop {
@@ -199,7 +247,7 @@
 }
 
 .header__name {
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .header__name-img {

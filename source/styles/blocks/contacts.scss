@@ -1,45 +1,78 @@
-.contacts {
+.contacts-wrapper {
   @include desktop {
     position: relative;
+
+    @include container;
   }
 }
+
 
 .contacts__info {
   align-items: center;
   padding: 26px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: $light-grey;
 
   @include tablet {
     padding: 60px 70px;
     background-color: $basic-white;
     gap: 30px;
+    margin: 0 auto;
+    max-width: 768px;
   }
 
   @include desktop {
     padding: 60px 80px;
     gap: 87px;
-    max-width: 625px;
+    max-width: 565px;
     position: absolute;
     left: 110px;
     top: 95px;
+    z-index: 3;
   }
 }
 
-.contacts__info--bg {
-  background-color: $light-grey;
-
-  @include desktop {
-    background-color: $basic-white;
-  }
+.contacts__map-wrapper {
+  position: relative;
 }
 
-.contacts__map {
-  max-height: 362px;
+.contacts__map-wrapper-img {
+  height: 362px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 
   @include tablet {
-    max-height: 400px;
+    height: 400px;
+  }
+}
+
+.contacts__map-wrapper-iframe {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+.contacts__map-iframe {
+  border: none;
+  display: block;
+  width: 100%;
+  height: 362px;
+
+  @include tablet {
+    height: 400px;
   }
 }
 
@@ -47,6 +80,7 @@
   @include subtitle;
   font-size: 16px;
   line-height: 20px;
+  color: $light-dark;
 
   @include tablet {
     max-width: 55%;
@@ -61,6 +95,7 @@
 .contacts__address {
   font-family: $primary-font;
   color: $dark-grey;
+  font-size: 14px;
   line-height: 20px;
   padding: 0;
   margin: 0;
@@ -68,5 +103,21 @@
   @include tablet {
     text-align: end;
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 157px;
   }
+
+  @include desktop {
+    text-align: start;
+  }
+}
+
+.contacts__address-street {
+  margin: 0;
+}
+
+.contacts__address-city {
+  margin: 0;
 }

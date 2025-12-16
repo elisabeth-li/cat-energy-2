@@ -96,8 +96,11 @@
   }
 
   @include desktop {
-    .nav__item--active .nav__link {
+    .nav__link {
       color: $basic-white;
+    }
+
+    .nav__item--active .nav__link {
       border-bottom: 2px solid $basic-white;
     }
   }
@@ -107,7 +110,7 @@
   content: "";
   z-index: -1;
   color: $basic-white;
-  background-image: linear-gradient($overlay-green), url("/images/background-image/hero-bc-mobile.jpg");
+  background-image: linear-gradient($overlay-green), url("/images/background-image/hero-bc-mobile@1x.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   width: 100%;
@@ -133,7 +136,7 @@
     height: 100%;
     background-image:
       linear-gradient($overlay-green),
-      url("/images/background-image/hero-bc-desktop.jpg");
+      url("/images/background-image/hero-bc-desktop@1x.jpg");
     background-position: 100% 0;
     top: 0;
     background-size: 720px 694px;

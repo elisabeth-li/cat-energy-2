@@ -5,12 +5,12 @@
   align-items: center;
   padding-top: 0;
 
-
   @include tablet {
     display: grid;
+    margin-top: 81px;
     border: 1px solid $grey-border-light;
     background: $basic-white;
-    min-height: 429px;
+    min-height: 460px;
   }
 
   .card__info-wrapper {

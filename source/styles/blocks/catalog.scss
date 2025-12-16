@@ -34,11 +34,11 @@
   margin: 0;
   padding: 20px 0 0;
   list-style: none;
+  align-items: start;
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 60px;
-    align-items: end;
   }
 
   @include desktop {

@@ -11,6 +11,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/32x32.png">
   <link rel="apple-touch-icon" href="favicons/apple-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -59,6 +61,10 @@
         </div>
         <div class="header__hero-image">
           <picture>
+            <source media="(min-width: 1440px)" width="552" height="499" type="image/webp" srcset="/images/main/hero-product-desktop@1x.webp 1x, /images/main/hero-product-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="709" height="609" type="image/webp" srcset="/images/main/hero-product-tablet@1x.webp 1x, /images/main/hero-product-tablet@2x.webp 2x">
+            <source width="280" height="270" type="image/webp" srcset="/images/main/hero-product-mobile@1x.webp 1x, /images/main/hero-product-mobile@2x.webp 2x">
+
             <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="/images/main/hero-product-desktop@1x.png 1x, /images/main/hero-product-desktop@2x.png 2x">
             <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="/images/main/hero-product-tablet@1x.png 1x, /images/main/hero-product-tablet@2x.png 2x">
             <img class="header__hero-img" src="/images/main/hero-product-mobile@1x.png" srcset="/images/main/hero-product-mobile@2x.png 2x" alt="Банка Cat Energy Pro 'Курица'" width="280" height="270">
@@ -138,11 +144,19 @@
 
         <div class="example__slider slider">
           <picture>
+            <source media="(min-width: 1440px)" width="560" height="512" type="image/webp" srcset="/images/example/example-before-tablet@1x.webp 1x, /images/example/example-before-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="/images/example/example-before-tablet@1x.webp 1x, /images/example/example-before-tablet@2x.webp 2x">
+            <source width="280" height="256" type="image/webp" srcset="/images/example/example-before-mobile@1x.webp 1x, /images/example/example-before-mobile@2x.webp 2x">
+
             <source media="(min-width: 1440px)" width="560" height="512" type="image/png" srcset="/images/example/example-before-tablet@1x.png 1x, /images/example/example-before-tablet@2x.png 2x">
             <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="/images/example/example-before-tablet@1x.png 1x, /images/example/example-before-tablet@2x.png 2x">
             <img class="slider__image slider__image--before" width="280" height="256" src="/images/example/example-before-mobile@1x.png" srcset="/images/example/example-before-mobile@2x.png 2x" alt="Толстый кот">
           </picture>
           <picture>
+            <source media="(min-width: 1440px)" width="560" height="512" type="image/webp" srcset="/images/example/example-after-tablet@1x.webp 1x, /images/example/example-after-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="/images/example/example-after-tablet@1x.webp 1x, /images/example/example-after-tablet@2x.webp 2x">
+            <source width="280" height="256" type="image/webp" srcset="/images/example/example-after-mobile@1x.webp 1x, /images/example/example-after-mobile@2x.webp 2x">
+
             <source media="(min-width: 1440px)" width="560" height="512" type="image/png" srcset="/images/example/example-after-tablet@1x.png 1x, /images/example/example-after-tablet@2x.png 2x">
             <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="/images/example/example-after-tablet@1x.png 1x, /images/example/example-after-tablet@2x.png 2x">
             <img class="slider__image slider__image--after" width="280" height="256" src="/images/example/example-after-mobile@1x.png" srcset="/images/example/example-after-mobile@2x.png 2x" alt="Похудевший кот">
@@ -172,13 +186,17 @@
       <div class="contacts__map-wrapper">
         <div class="contacts__map-wrapper-img">
           <picture>
+            <source media="(min-width: 1440px)" width="1440" height="400" type="image/webp" srcset="/images/location/location-desktop@1x.webp 1x, /images/location/location-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="768" height="400" type="image/webp" srcset="/images/location/location-tablet@1x.webp 1x, /images/location/location-tablet@2x.webp 2x">
+            <source width="320" height="362" type="image/webp" srcset="/images/location/location@1x.webp 1x, /images/location/location@2x.webp 2x">
+
             <source media="(min-width: 1440px)" width="1440" height="400" type="image/jpeg" srcset="/images/location/location-desktop@1x.jpg 1x, /images/location/location-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" width="768" height="400" type="image/jpeg" srcset="/images/location/location-tablet@1x.jpg 1x, /images/location/location-tablet@2x.jpg 2x">
             <img class="contacts__map-img" src="/images/location/location@1x.jpg" srcset="/images/location/location@2x.jpg 2x" width="320" height="362" alt="Карта — Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
           </picture>
         </div>
         <div class="contacts__map-wrapper-iframe">
-          <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989428318433!2d30.32050837632084!3d59.93879686208835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1765097597960!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="contacts__map-iframe" title="Карта — Санкт-Петербург, ул. Большая Конюшенная, 19/8" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989428318433!2d30.32050837632084!3d59.93879686208835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1765097597960!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>

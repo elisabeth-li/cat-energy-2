@@ -83,7 +83,6 @@
 
   @include desktop {
     margin: 0;
-    border: none;
   }
 }
 
@@ -93,8 +92,6 @@
   gap: 13px;
   gap: 13px;
   align-items: center;
-  padding: 6px 0 19px;
-  border-bottom: 1px solid $grey-border-light;
   color: $dark-grey;
 
   @include tablet {
@@ -104,20 +101,22 @@
     border: 1px solid $grey-border-light;
     border-left: 0;
     border-right: 0;
+    padding: 25px 38px;
   }
 
   @include desktop {
     grid-template-columns: 280px 1fr 1fr 244px;
     gap: 35px;
-    padding: 13px 0;
+    padding: 15px 0;
+    border: none;
   }
 }
 
 .additional__name {
   @include subtitle;
-  grid-column: -1 / 1;
   font-size: 16px;
   line-height: 16px;
+  grid-column: -1 / 1;
 
   @include tablet {
   @include tablet {
@@ -174,8 +173,8 @@
   }
 
   @include desktop {
-    grid-column: 3;
     text-align: left;
+    grid-column: 3;
   }
 }
 
@@ -189,7 +188,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-mobile@1x.jpg");
+  background-image: linear-gradient($overlay-green), url("/images/background-image/gift-mobile.jpg");
 
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-mobile@2x.jpg");
@@ -200,7 +199,7 @@
     height: 200px;
     padding: 60px 80px;
     align-items: center;
-    background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-tablet@1x.jpg");
+    background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-tablet@2x.jpg");
@@ -212,7 +211,7 @@
     height: 288px;
     padding: 56px 42px 42px;
     align-items: normal;
-    background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-desktop@1x.jpg");
+    background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-desktop@2x.jpg");
@@ -233,29 +232,29 @@
   background-position: center;
 
   @include tablet {
-    left: 80px;
     width: 80px;
     height: 82px;
+    left: 80px;
   }
 }
 
 .additional__gift-text {
+  color: $basic-white;
   margin: auto 0 0;
   padding: 0 42px;
   text-align: center;
   font-size: 16px;
   line-height: 20px;
-  color: $basic-white;
 
   @include tablet {
-    margin: 0 10% 0 auto;
-    padding: 0;
     max-width: 161px;
     text-align: left;
+    margin: 0 10% 0 auto;
+    padding: 0;
   }
 
   @include desktop {
-    margin: auto 0 0;
     text-align: center;
+    margin: auto 0 0;
   }
 }

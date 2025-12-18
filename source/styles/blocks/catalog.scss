@@ -13,6 +13,7 @@
 
 .catalog__title {
   @include main-title;
+<<<<<<< HEAD
   position: relative;
   margin: 0;
   padding: 28px 0 41px;
@@ -25,6 +26,22 @@
 
   @include desktop {
     padding-top: 40px;
+=======
+  padding: 25px 0 41px;
+  margin: 0;
+  position: relative;
+
+  @include underline;
+
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  @include desktop {
+    padding-top: 68px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 
@@ -41,7 +58,12 @@
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
+<<<<<<< HEAD
     gap: 46px 60px;
+=======
+    gap: 30px 60px;
+    align-items: end;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {

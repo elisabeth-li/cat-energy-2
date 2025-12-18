@@ -6,7 +6,12 @@
 
 .steps__wrapper {
   @include container;
+<<<<<<< HEAD
   padding: 4px 20px 49px;
+=======
+  padding-top: 4px;
+  padding-bottom: 49px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     padding-bottom: 47px;
@@ -21,7 +26,11 @@
 
 .steps__title {
   @include main-title;
+<<<<<<< HEAD
   margin-bottom: 42px;
+=======
+  margin-bottom: 40px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     margin-bottom: 32px;
@@ -39,6 +48,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 37px 59px;
   }
+
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
@@ -78,7 +88,11 @@
   @include tablet {
     width: 80px;
     height: 80px;
+<<<<<<< HEAD
     margin-top: 41px;
+=======
+    margin-top: 38px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
     padding-right: 0;
   }
 }

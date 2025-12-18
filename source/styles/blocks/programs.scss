@@ -15,7 +15,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
+<<<<<<< HEAD
   align-items: start;
+=======
+  list-style: none;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   padding: 0;
   margin: 0;
   list-style: none;
@@ -32,6 +36,7 @@
 }
 
 .programs__item {
+<<<<<<< HEAD
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -42,11 +47,25 @@
     flex-direction: column;
     align-items: start;
     padding: 79px 63px 60px 52px;
+=======
+  background: $light-grey;
+  padding: 23px 30px 18px 20px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+    padding: 79px 63px 60px 52px;
+    align-items: start;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {
     flex-flow: row wrap;
     align-items: center;
+<<<<<<< HEAD
     padding: 41px 61px 65px 52px;
   }
 }
@@ -58,6 +77,9 @@
 
   @include desktop {
     gap: 62px;
+=======
+    padding-bottom: 64px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 
@@ -68,15 +90,29 @@
   padding: 0;
   line-height: 37px;
   text-transform: uppercase;
+<<<<<<< HEAD
+=======
+  font-weight: 400;
+  margin: 0 0 0 20px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     margin: 0;
     font-size: 36px;
     line-height: 36px;
+<<<<<<< HEAD
+=======
+    padding: 0;
+    margin: 0 0 2px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {
     margin: 0 auto;
+<<<<<<< HEAD
+=======
+    padding-left: 33px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
     text-align: center;
   }
 }
@@ -87,6 +123,13 @@
   border-bottom: 1px solid $basic-border;
   font-size: 14px;
   line-height: 18px;
+<<<<<<< HEAD
+=======
+  margin: 0 0 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid $basic-border;
+
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     max-width: 57%;
@@ -95,21 +138,37 @@
     border-bottom: 0;
     font-size: 16px;
     line-height: 24px;
+<<<<<<< HEAD
+=======
+    max-width: 57%;
+    padding-bottom: 39px;
+    margin: 0 0 18px;
+    border-bottom: 0;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {
     max-width: 100%;
+<<<<<<< HEAD
     margin: 0;
     padding: 39px 0 23px;
+=======
+    padding: 73px 0 33px;
+    margin: 0;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 
 .programs__link {
+<<<<<<< HEAD
   @include subtitle;
   display: inline-flex;
   align-items: center;
   gap: 13px;
   padding: 20px 15px 0 0;
+=======
+  font-family: $secondary-font;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
@@ -146,16 +205,49 @@
       opacity: 0.3;
     }
   }
+
+<<<<<<< HEAD
+=======
+  &:active {
+    opacity: 0.1;
+
+    &::after {
+      transform: translateX(8px);
+    }
+  }
+
+  &:hover {
+    &::after {
+      transform: translateX(8px);
+    }
+  }
 }
 
+.programs__link--more::after {
+  content: "";
+  width: 24px;
+  height: 12px;
+  background-color: $basic-dark;
+
+  mask: url("../../icons/stack.svg#icon-arrow") center/contain no-repeat;
+
+  transition: transform 0.2s ease;
+}
+
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 .programs__item-icon {
   content: "";
   position: relative;
   display: block;
   width: 50px;
   height: 50px;
+<<<<<<< HEAD
   border-radius: 50%;
   background-color: $overlay-green;
+=======
+  display: block;
+  position: relative;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     position: absolute;
@@ -163,7 +255,13 @@
     left: 100%;
     width: 200px;
     height: 200px;
+<<<<<<< HEAD
     transform: translateX(95%);
+=======
+    position: absolute;
+    right: 63px;
+    top: 92px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {
@@ -172,7 +270,12 @@
     top: 0;
     width: 100px;
     height: 100px;
+<<<<<<< HEAD
     transform: translateX(0%);
+=======
+    right: auto;
+    top: 47px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 
@@ -186,13 +289,26 @@
   background-image: url("../../icons/stack.svg#icon-cat-slim");
   background-repeat: no-repeat;
   background-size: 36px 50px;
+<<<<<<< HEAD
+=======
+  top: -2px;
+  left: 7px;
+  position: absolute;
+  width: 36px;
+  height: 50px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     top: -11px;
     left: 30px;
     width: 140px;
     height: 194px;
+<<<<<<< HEAD
     background-size: 140px 194px;
+=======
+    top: -11px;
+    left: 30px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {
@@ -200,6 +316,7 @@
     left: 15px;
     width: 70px;
     height: 97px;
+<<<<<<< HEAD
     background-size: 70px 97px;
   }
 }
@@ -211,6 +328,10 @@
 
   @include desktop {
     margin-left: 0;
+=======
+    top: -6px;
+    left: 15px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 
@@ -224,13 +345,26 @@
   background-image: url("../../icons/stack.svg#icon-cat-pro");
   background-repeat: no-repeat;
   background-size: 67px 28px;
+<<<<<<< HEAD
+=======
+  top: 12px;
+  left: -8px;
+  position: absolute;
+  width: 67px;
+  height: 28px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     top: 43px;
     left: -35px;
     width: 268px;
     height: 112px;
+<<<<<<< HEAD
     background-size: 268px 112px;
+=======
+    left: -35px;
+    top: 43px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {
@@ -238,6 +372,11 @@
     left: -17px;
     width: 134px;
     height: 56px;
+<<<<<<< HEAD
     background-size: 134px 56px;
+=======
+    top: 20px;
+    left: -17px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }

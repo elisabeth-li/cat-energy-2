@@ -5,14 +5,22 @@
 
 .nav__toggle {
   position: relative;
+<<<<<<< HEAD
   display: block;
   padding: 0;
+=======
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   width: 24px;
   height: 24px;
   background: $basic-white;
   border: none;
   border-radius: 2px;
   cursor: pointer;
+<<<<<<< HEAD
+=======
+  padding: 0;
+  display: block;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     display: none;
@@ -27,7 +35,11 @@
   width: 24px;
   height: 2px;
   background-color: $basic-dark;
+<<<<<<< HEAD
   transition: transform 0.25s ease-in-out, top 0.25s ease-in-out, opacity 0.25s ease-in-out;
+=======
+  transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 }
 
 .nav__toggle::before {
@@ -45,7 +57,11 @@
   width: 24px;
   height: 2px;
   background-color: $basic-dark;
+<<<<<<< HEAD
   transition: opacity 0.25s ease-in-out;
+=======
+  transition: opacity 0.3s ease;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 }
 
 .nav--opened .nav__toggle::before {
@@ -93,6 +109,7 @@
 }
 
 .nav__list {
+<<<<<<< HEAD
   display: flex;
   flex-flow: column wrap;
   margin: 0;
@@ -107,15 +124,33 @@
 
   @include desktop {
     max-width: 580px;
+=======
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 24px;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 
 .nav__item {
   text-align: center;
+<<<<<<< HEAD
   border-top: 1px solid $grey-border-light;
 
   &:last-child {
     border-bottom: 1px solid $grey-border-light;
+=======
+  border-top: 1px solid $border-grey;
+
+  &:last-child {
+    border-bottom: 1px solid $border-grey;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include tablet {
@@ -128,6 +163,7 @@
 }
 
 .nav__link {
+<<<<<<< HEAD
   @include subtitle;
   display: block;
   text-decoration: none;
@@ -135,6 +171,17 @@
   line-height: 20px;
   padding: 22px 0;
   transition: opacity 0.25s ease-in-out;
+=======
+  display: block;
+  font-family: $secondary-font;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+  color: $basic-dark;
+  padding: 22px 0;
+  transition: color 0.3s ease;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     font-size: 18px;
@@ -146,12 +193,18 @@
     font-size: 20px;
   }
 
+<<<<<<< HEAD
   &:hover {
     opacity: 0.3;
   }
 
   &:active {
     opacity: 0.6;
+=======
+  &:hover,
+  &:focus {
+    color: $basic-green;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 
@@ -159,7 +212,16 @@
   border-bottom: none;
 
   @include tablet {
+<<<<<<< HEAD
     padding: 7px 0;
     border-bottom: 2px solid $basic-green;
+=======
+    border-bottom: 2px solid $basic-green;
+    padding: 7px 0;
+  }
+
+  @include desktop {
+    border-bottom: 2px solid $basic-white;
+>>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }

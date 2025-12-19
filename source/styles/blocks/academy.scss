@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  font-family: $primary-font;
+  font-size: 16px;
   text-decoration: none;
   color: $dark-grey;
   transition: opacity 0.25s ease-in-out;
@@ -10,14 +12,13 @@
     gap: 24px;
   }
 
-
   &::after {
     content: "";
     display: block;
     width: 27px;
     height: 34px;
     background-color: $dark-grey;
-    mask-image: url("/images/logo/logo-html-academy.svg");
+    mask-image: url("./images/logo/logo-html-academy.svg");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 27px 34px;
@@ -36,6 +37,7 @@
 }
 
 .academy__logo {
-  width: 27px;
-  height: 34px;
+  margin-right: auto;
+  font-family: $primary-font;
+  font-size: 16px;
 }

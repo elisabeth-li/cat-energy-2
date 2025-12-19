@@ -1,13 +1,9 @@
 .catalog__wrapper {
   @include container;
-  padding-bottom: 33px;
+  padding-bottom: 25px;
 
   @include tablet {
-    margin-bottom: 57px;
-  }
-
-  @include desktop {
-    margin-bottom: 70px;
+    margin-bottom: 74px;
   }
 }
 
@@ -15,13 +11,12 @@
   @include main-title;
 <<<<<<< HEAD
   position: relative;
-  margin: 0;
-  padding: 28px 0 41px;
 
   @include underline;
 
   @include tablet {
-    padding: 60px 0 50px;
+    padding-top: 60px;
+    padding-bottom: 50px;
   }
 
   @include desktop {
@@ -68,7 +63,7 @@
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
-    gap: 50px 82px;
+    gap: 80px 63px;
   }
 }
 

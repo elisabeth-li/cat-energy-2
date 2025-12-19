@@ -1,6 +1,6 @@
 .programs__wrapper {
   @include container;
-  padding-bottom: 22px;
+  padding-bottom: 20px;
 
   @include tablet {
     padding-bottom: 45px;
@@ -22,7 +22,6 @@
 >>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   padding: 0;
   margin: 0;
-  list-style: none;
 
   @include tablet {
     gap: 30px;
@@ -40,12 +39,9 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  padding: 23px 30px 18px 20px;
-  background: $light-grey;
 
   @include tablet {
     flex-direction: column;
-    align-items: start;
     padding: 79px 63px 60px 52px;
 =======
   background: $light-grey;
@@ -71,9 +67,9 @@
 }
 
 .programs__item-name {
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
 
   @include desktop {
     gap: 62px;
@@ -84,10 +80,8 @@
 }
 
 .programs__title {
-  @include title;
-  flex: 1;
-  margin: 0 0 0 20px;
-  padding: 0;
+  font-size: 24px;
+  font-family: $secondary-font;
   line-height: 37px;
   text-transform: uppercase;
 <<<<<<< HEAD
@@ -97,7 +91,6 @@
 >>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
-    margin: 0;
     font-size: 36px;
     line-height: 36px;
 <<<<<<< HEAD
@@ -118,6 +111,9 @@
 }
 
 .programs__text {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
   margin: 0;
   padding: 22px 0;
   border-bottom: 1px solid $basic-border;
@@ -132,9 +128,11 @@
 >>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
+    font-size: 16px;
+    line-height: 24px;
     max-width: 57%;
-    margin: 0;
     padding-bottom: 39px;
+    margin: 0 0 18px;
     border-bottom: 0;
     font-size: 16px;
     line-height: 24px;
@@ -172,11 +170,18 @@
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-right: 15px;
+  color: $basic-dark;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   transition: opacity 0.25s ease-in-out;
 
   @include tablet {
-    gap: 22px;
-    padding-top: 13px;
+    font-size: 20px;
+    line-height: 100%;
   }
 
   &:active {
@@ -186,18 +191,19 @@
   &.programs__link--more {
     &::after {
       content: "";
-      width: 24px;
-      height: 12px;
+      width: 32px;
+      height: 10px;
       background-color: $basic-dark;
       mask: url("../../icons/stack.svg#icon-arrow") center/contain no-repeat;
-      mask-size: 100% 100%;
+      mask-size: 32px 10px;
       transition:
-        width 0.25s ease-in-out,
-        opacity 0.25s ease-in-out;
+        mask-size 0.25s ease-in-out,
+        transform 0.25s ease-in-out;
     }
 
     &:hover::after {
-      width: 32px;
+      transform: translateX(2px);
+      mask-size: 24px 12px;
     }
 
     &:active::after {
@@ -250,9 +256,6 @@
 >>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
-    position: absolute;
-    top: 14px;
-    left: 100%;
     width: 200px;
     height: 200px;
 <<<<<<< HEAD
@@ -265,9 +268,6 @@
   }
 
   @include desktop {
-    position: relative;
-    left: 0;
-    top: 0;
     width: 100px;
     height: 100px;
 <<<<<<< HEAD
@@ -281,11 +281,6 @@
 
 .programs__item-icon--slim::after {
   content: "";
-  position: absolute;
-  top: -2px;
-  left: 7px;
-  width: 36px;
-  height: 50px;
   background-image: url("../../icons/stack.svg#icon-cat-slim");
   background-repeat: no-repeat;
   background-size: 36px 50px;
@@ -299,8 +294,7 @@
 >>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
-    top: -11px;
-    left: 30px;
+    background-size: 140px 194px;
     width: 140px;
     height: 194px;
 <<<<<<< HEAD
@@ -312,8 +306,7 @@
   }
 
   @include desktop {
-    top: -6px;
-    left: 15px;
+    background-size: 70px 97px;
     width: 70px;
     height: 97px;
 <<<<<<< HEAD
@@ -337,11 +330,6 @@
 
 .programs__item-icon--pro::after {
   content: "";
-  position: absolute;
-  top: 12px;
-  left: -8px;
-  width: 67px;
-  height: 28px;
   background-image: url("../../icons/stack.svg#icon-cat-pro");
   background-repeat: no-repeat;
   background-size: 67px 28px;
@@ -355,8 +343,7 @@
 >>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
-    top: 43px;
-    left: -35px;
+    background-size: 268px 112px;
     width: 268px;
     height: 112px;
 <<<<<<< HEAD
@@ -368,8 +355,7 @@
   }
 
   @include desktop {
-    top: 20px;
-    left: -17px;
+    background-size: 134px 56px;
     width: 134px;
     height: 56px;
 <<<<<<< HEAD

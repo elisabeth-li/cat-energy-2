@@ -38,16 +38,18 @@
 }
 
 .steps__list {
-  display: grid;
-  row-gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  display: grid;
+  row-gap: 20px;
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
     gap: 37px 59px;
   }
+
 
 
   @include desktop {
@@ -66,7 +68,7 @@
     position: relative;
     display: block;
     min-height: 280px;
-    max-width: 250px;
+    max-width: 230px;
   }
 
   @include desktop {
@@ -77,10 +79,12 @@
 .steps__item::before {
   content: "";
   display: block;
+
   width: 60px;
   height: 60px;
   padding-right: 60px;
   background-color: $basic-green;
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px 32px;
@@ -117,13 +121,16 @@
   @include tablet {
     counter-increment: steps-counter;
     content: counter(steps-counter);
+
     position: absolute;
     right: 0;
     top: 0;
+
     font-size: 280px;
     font-family: $secondary-font;
     color: $light-grey;
     line-height: 1;
+
     z-index: 0;
   }
 }
@@ -133,6 +140,7 @@
   color: $dark-grey;
   z-index: 1;
   flex: 1;
+
   font-size: 14px;
   line-height: 18px;
 

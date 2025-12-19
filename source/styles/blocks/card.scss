@@ -1,12 +1,13 @@
 .card {
-  position: relative;
+  align-items: center;
+  text-align: center;
+  color: $dark-grey;
   display: grid;
   grid-template-columns: 1fr 1fr;
 <<<<<<< HEAD
   align-items: center;
   padding-bottom: 21px;
-  text-align: center;
-  color: $dark-grey;
+  position: relative;
 
   @include underline;
 =======
@@ -18,6 +19,7 @@
 >>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
+    line-height: 20px;
     grid-template-columns: 1fr;
     padding: 30px 37px 40px;
 <<<<<<< HEAD
@@ -30,8 +32,6 @@
 
   @include desktop {
     justify-content: center;
-    background: linear-gradient(to bottom, $basic-white 100px, $light-grey 100px);
-    max-width: 245px;
   }
 }
 
@@ -45,7 +45,6 @@
   }
 
   @include desktop {
-    width: 169px;
     height: 210px;
   }
 }
@@ -77,14 +76,13 @@
   max-width: 76px;
 
   @include subtitle;
-  padding: 0 0 14px;
+  color: $dark-grey;
   text-align: left;
   font-size: 16px;
+  padding: 0 0 14px;
   line-height: 20px;
-  color: $dark-grey;
 
   @include tablet {
-    padding: 16px 46px 10px;
     text-align: center;
     max-width: 100%;
 <<<<<<< HEAD
@@ -95,7 +93,7 @@
   }
 
   @include desktop {
-    padding: 5px 30px 15px;
+    padding-bottom: 23px;
   }
 }
 
@@ -103,6 +101,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 10px;
+  list-style: none;
+  padding: 0;
   margin: 0 0 21px;
   padding: 0;
 <<<<<<< HEAD
@@ -135,6 +135,7 @@
     padding-bottom: 5px;
     font-size: 16px;
     line-height: 20px;
+    padding-bottom: 5px;
     border-bottom: 1px solid $grey-border-light;
 =======
     font-size: 16px;
@@ -150,8 +151,8 @@
 }
 
 .card__criterion {
-  flex-grow: 1;
   text-align: left;
+  flex-grow: 1;
 }
 
 .card__value {

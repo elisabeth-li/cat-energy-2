@@ -26,7 +26,9 @@
 <<<<<<< HEAD
 .example__wrapper {
   @include container;
-  padding: 27px 20px 40px;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
 
   @include tablet {
     display: flex;
@@ -70,7 +72,7 @@
 
 .example__title {
   @include main-title;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 
   @include tablet {
 <<<<<<< HEAD
@@ -124,6 +126,7 @@
 
 .example__stats {
   display: grid;
+  padding: 0;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin-bottom: 34px;
@@ -143,12 +146,12 @@
 }
 
 .example__stat {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border: 1px solid $grey-border-light;
   width: 100%;
   min-height: 56px;
 <<<<<<< HEAD
@@ -170,7 +173,6 @@
 
 .example__value {
   @include subtitle;
-  margin-bottom: 4px;
   font-size: 24px;
   line-height: 24px;
 <<<<<<< HEAD
@@ -180,8 +182,6 @@
 >>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
-    margin: 0;
-    padding-bottom: 6px;
     font-size: 30px;
     line-height: 37px;
 <<<<<<< HEAD
@@ -198,15 +198,17 @@
   bottom: 0;
   margin: 0;
   padding: 0 10px;
+  margin: 0;
   max-width: 77px;
   font-size: 12px;
   line-height: 12px;
-  color: $dark-grey;
-  background-color: $bg-grey;
+
+  position: absolute;
   transform: translateY(60%);
+  bottom: 0;
 
   @include tablet {
-    max-width: 145px;
+    background-color: $basic-white;
     font-size: 14px;
     line-height: 14px;
     background-color: $basic-white;
@@ -238,9 +240,9 @@
 
 .example__cost {
   @include subtitle;
-  margin-bottom: 20px;
-  text-align: center;
   line-height: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 
   @include tablet {
     display: flex;
@@ -249,7 +251,8 @@
     text-align: end;
     vertical-align: middle;
     gap: 8px;
-    margin: 0 0 18px auto;
+    margin-left: auto;
+    margin-bottom: 18px;
     max-width: 190px;
     max-height: 73px;
 =======

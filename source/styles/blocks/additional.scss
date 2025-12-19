@@ -28,8 +28,9 @@
 }
 
 .additional__title-wrapper {
-  @include container;
   position: relative;
+
+  @include container;
   padding: 0;
 
   @include tablet {
@@ -43,13 +44,13 @@
 
 .additional__title {
   @include title;
-  display: inline-block;
-  margin-bottom: 36px;
   padding: 0 40px 0 20px;
+  margin-bottom: 36px;
+  display: inline-block;
   background-color: $basic-white;
 
   @include tablet {
-    margin-bottom: 82px;
+    padding-right: 40px;
     padding-left: 40px;
     padding-right: 40px;
     padding-left: 40px;
@@ -65,16 +66,19 @@
 }
 
 .additional__list {
-  display: grid;
-  gap: 7px;
-  margin: 0 0 35px;
-  padding: 13px 0 0;
+  margin: 0;
+  padding: 0;
   list-style: none;
-  border-top: 1px solid $grey-border-light;
+  display: grid;
+  gap: 21px;
+  padding-top: 13px;
+  margin-bottom: 47px;
+  border-top: 1px solid #cdcdcd;
 
   @include tablet {
-    gap: 4px;
+    gap: 0;
     margin-bottom: 70px;
+    border: 1px solid #cdcdcd;
     padding: 0;
     border: 1px solid $grey-border-light;
     border: 1px solid #cdcdcd;
@@ -97,10 +101,10 @@
   @include tablet {
     grid-template-columns: 1fr auto auto;
     gap: 23px 52px;
-    padding: 25px 38px;
     border: 1px solid $grey-border-light;
     border-left: 0;
     border-right: 0;
+    padding: 25px 38px;
     padding: 25px 38px;
   }
 
@@ -116,6 +120,7 @@
   @include subtitle;
   font-size: 16px;
   line-height: 16px;
+  grid-column: -1 / 1;
   grid-column: -1 / 1;
 
   @include tablet {
@@ -174,6 +179,7 @@
 
   @include desktop {
     text-align: left;
+    grid-column: 3;
     grid-column: 3;
   }
 }
@@ -235,10 +241,12 @@
     width: 80px;
     height: 82px;
     left: 80px;
+    left: 80px;
   }
 }
 
 .additional__gift-text {
+  color: $basic-white;
   color: $basic-white;
   margin: auto 0 0;
   padding: 0 42px;
@@ -251,10 +259,13 @@
     text-align: left;
     margin: 0 10% 0 auto;
     padding: 0;
+    margin: 0 10% 0 auto;
+    padding: 0;
   }
 
   @include desktop {
     text-align: center;
+    margin: auto 0 0;
     margin: auto 0 0;
   }
 }

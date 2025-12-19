@@ -1,5 +1,7 @@
 .subscribe {
-  @include container;
+  @include full-width-line(50px, 96px, 116px);
+  display: block;
+  position: relative;
   padding-top: 40px;
 
   @include tablet {
@@ -13,27 +15,38 @@
 
 .subscribe__wrapper {
   @include container;
-  padding-top: 32px;
   padding-bottom: 40px;
 
   @include tablet {
-    padding: 0 68px;
+    padding: 0 68px 80px;
   }
 
   @include desktop {
-    padding: 96px 110px 104px;
+    padding: 0 110px 104px;
+  }
+}
+
+.subscribe__title-wrapper {
+  position: relative;
+
+  @include container;
+  padding: 0;
+
+  @include tablet {
+    padding: 0 30px;
+  }
+
+  @include desktop {
+    padding: 0  70px;
   }
 }
 
 .subscribe__title {
   @include title;
+  display: inline-block;
   margin-bottom: 32px;
-  position: relative;
-  padding-right: 40px;
+  padding: 0 40px 0 20px;
   background: $basic-white;
-  max-width: fit-content;
-
-  // @include title-line;
 
   @include tablet {
     margin-bottom: 66px;
@@ -46,12 +59,10 @@
 }
 
 .subscribe__text {
+  margin: 0 0 24px;
   font-family: $secondary-font;
   text-align: center;
   font-size: 16px;
-  margin: 0;
-  margin-bottom: 24px;
-
 
   @include tablet {
     font-size: 24px;
@@ -61,7 +72,8 @@
 
 .subscribe__form {
   display: grid;
-  gap: 10px;
+  gap: 15px;
+  min-height: 56px;
 
 
   @include tablet {
@@ -73,17 +85,30 @@
 
 .subscribe__input {
   @include subtitle;
-  color: $dark-grey;
-  box-sizing: border-box;
-  padding: 12px;
-  border: 1px solid $border-grey;
   width: 100%;
+  height: 100%;
+  padding: 12px;
   font-size: 20px;
   line-height: 100%;
+  color: $dark-grey;
+  box-sizing: border-box;
+  border: 2px solid $border-form;
 
   @include desktop {
     padding: 12px;
     min-width: 280px;
+  }
+
+  &:hover {
+    border: 2px solid $grey-border-light;
+  }
+
+  &:focus-visible {
+    border: 2px solid $dark-grey;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid $error;
   }
 }
 
@@ -106,6 +131,10 @@
   @include tablet {
     padding-bottom: 12px;
     min-width: 256px;
+    max-width: 300px;
+  }
+
+  @include desktop {
     max-width: 512px;
   }
 }

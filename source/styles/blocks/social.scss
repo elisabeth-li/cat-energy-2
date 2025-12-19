@@ -4,6 +4,8 @@
   gap: 22px;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  width: 100%;
   list-style: none;
 }
 
@@ -13,6 +15,16 @@
   justify-content: center;
   width: 28px;
   height: 22px;
+  transition: background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
+
+  &:hover {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    background-color: $basic-green;
+    opacity: 0.3;
+  }
 }
 
 .social__link--vk {

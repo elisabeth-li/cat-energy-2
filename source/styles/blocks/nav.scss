@@ -5,14 +5,14 @@
 
 .nav__toggle {
   position: relative;
+  display: block;
+  padding: 0;
   width: 24px;
   height: 24px;
   background: $basic-white;
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  padding: 0;
-  display: block;
 
   @include tablet {
     display: none;
@@ -27,7 +27,7 @@
   width: 24px;
   height: 2px;
   background-color: $basic-dark;
-  transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.25s ease-in-out, top 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
 
 .nav__toggle::before {
@@ -45,7 +45,7 @@
   width: 24px;
   height: 2px;
   background-color: $basic-dark;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .nav--opened .nav__toggle::before {
@@ -93,24 +93,29 @@
 }
 
 .nav__list {
-  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  list-style: none;
 
   @include tablet {
     flex-direction: row;
-    gap: 24px;
+    gap: 25px;
+    max-width: 440px;
+  }
+
+  @include desktop {
+    max-width: 580px;
   }
 }
 
 .nav__item {
   text-align: center;
-  border-top: 1px solid $border-grey;
+  border-top: 1px solid $grey-border-light;
 
   &:last-child {
-    border-bottom: 1px solid $border-grey;
+    border-bottom: 1px solid $grey-border-light;
   }
 
   @include tablet {
@@ -123,15 +128,13 @@
 }
 
 .nav__link {
+  @include subtitle;
   display: block;
-  font-family: $secondary-font;
   text-decoration: none;
-  text-transform: uppercase;
   font-size: 20px;
   line-height: 20px;
-  color: $basic-dark;
   padding: 22px 0;
-  transition: color 0.3s ease;
+  transition: opacity 0.25s ease-in-out;
 
   @include tablet {
     font-size: 18px;
@@ -143,9 +146,12 @@
     font-size: 20px;
   }
 
-  &:hover,
-  &:focus {
-    color: $basic-green;
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -153,11 +159,7 @@
   border-bottom: none;
 
   @include tablet {
-    border-bottom: 2px solid $basic-green;
     padding: 7px 0;
-  }
-
-  @include desktop {
-    border-bottom: 2px solid $basic-white;
+    border-bottom: 2px solid $basic-green;
   }
 }

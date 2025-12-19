@@ -6,12 +6,7 @@
 
 .steps__wrapper {
   @include container;
-<<<<<<< HEAD
   padding: 4px 20px 49px;
-=======
-  padding-top: 4px;
-  padding-bottom: 49px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     padding-bottom: 47px;
@@ -26,11 +21,7 @@
 
 .steps__title {
   @include main-title;
-<<<<<<< HEAD
   margin-bottom: 42px;
-=======
-  margin-bottom: 40px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     margin-bottom: 32px;
@@ -38,19 +29,16 @@
 }
 
 .steps__list {
+  display: grid;
+  row-gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
-
-  display: grid;
-  row-gap: 20px;
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
     gap: 37px 59px;
   }
-
-
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
@@ -68,7 +56,7 @@
     position: relative;
     display: block;
     min-height: 280px;
-    max-width: 230px;
+    max-width: 250px;
   }
 
   @include desktop {
@@ -79,12 +67,10 @@
 .steps__item::before {
   content: "";
   display: block;
-
   width: 60px;
   height: 60px;
   padding-right: 60px;
   background-color: $basic-green;
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px 32px;
@@ -92,11 +78,7 @@
   @include tablet {
     width: 80px;
     height: 80px;
-<<<<<<< HEAD
     margin-top: 41px;
-=======
-    margin-top: 38px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
     padding-right: 0;
   }
 }
@@ -121,16 +103,13 @@
   @include tablet {
     counter-increment: steps-counter;
     content: counter(steps-counter);
-
     position: absolute;
     right: 0;
     top: 0;
-
     font-size: 280px;
     font-family: $secondary-font;
     color: $light-grey;
     line-height: 1;
-
     z-index: 0;
   }
 }
@@ -140,7 +119,6 @@
   color: $dark-grey;
   z-index: 1;
   flex: 1;
-
   font-size: 14px;
   line-height: 18px;
 

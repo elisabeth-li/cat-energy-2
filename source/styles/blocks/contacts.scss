@@ -1,25 +1,12 @@
 .contacts-wrapper {
   @include desktop {
-    position: relative;
-
     @include container;
     position: relative;
-
-    @include container;
   }
 }
 
-<<<<<<< HEAD
 .contacts-wrapper--bg-color {
   background-color: $light-grey;
-=======
-
-.contacts__info {
-  align-items: center;
-  padding: 26px 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   .contacts__info {
     background-color: $light-grey;
@@ -31,25 +18,20 @@
 }
 
 .contacts__info {
-  align-items: center;
-  padding: 26px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 26px 20px;
   background-color: $basic-white;
 
-
   @include tablet {
+    margin: 0 auto;
     padding: 60px 70px;
     gap: 30px;
-<<<<<<< HEAD
-=======
-    margin: 0 auto;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
     max-width: 768px;
   }
 
   @include desktop {
-<<<<<<< HEAD
     position: absolute;
     left: 110px;
     top: 95px;
@@ -57,15 +39,6 @@
     padding: 60px 80px;
     max-width: 565px;
     z-index: 2;
-=======
-    padding: 60px 80px;
-    gap: 87px;
-    max-width: 565px;
-    position: absolute;
-    left: 110px;
-    top: 95px;
-    z-index: 3;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 
@@ -74,19 +47,10 @@
 }
 
 .contacts__map-wrapper-img {
-<<<<<<< HEAD
   position: relative;
   height: 362px;
   text-align: center;
-  position: relative;
   z-index: 0;
-=======
-  height: 362px;
-  overflow: hidden;
-  text-align: center;
-  position: relative;
-  z-index: 1;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     height: 400px;
@@ -95,48 +59,33 @@
 
 .contacts__map-wrapper-iframe {
   position: absolute;
-<<<<<<< HEAD
   inset: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
+}
+
+.contacts--nojs .contacts__map-wrapper-iframe {
+  display: none;
+}
+
+.contacts--js .contacts__map-wrapper-img {
+  display: none;
 }
 
 .contacts__map-img {
   display: block;
-=======
-  z-index: 1;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.contacts__map-img {
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-<<<<<<< HEAD
 }
 
-
 .contacts__map-iframe {
-  border: none;
   display: block;
   width: 100%;
   height: 362px;
   border: none;
-=======
-  display: block;
-}
-
-
-.contacts__map-iframe {
-  border: none;
-  display: block;
-  width: 100%;
-  height: 362px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     height: 400px;
@@ -160,30 +109,21 @@
 }
 
 .contacts__address {
+  margin: 0;
+  padding: 0;
   font-family: $primary-font;
   color: $dark-grey;
   font-size: 14px;
   line-height: 20px;
-  padding: 0;
-  margin: 0;
 
   @include tablet {
-    text-align: end;
-    margin-left: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 157px;
     text-align: end;
     margin-left: auto;
-<<<<<<< HEAD
     font-size: 16px;
-=======
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 157px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 
   @include desktop {

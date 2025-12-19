@@ -3,61 +3,39 @@
 }
 
 .footer__wrapper {
-  @include container;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-=======
-  padding: 20px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   flex-direction: column;
   gap: 20px;
 
+  @include container;
+
+
   @include tablet {
-<<<<<<< HEAD
-=======
-    padding-bottom: 40px;
-    padding-top: 45px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
     flex-direction: row;
+    padding: 30px 30px 40px;
   }
 
   @include desktop {
-<<<<<<< HEAD
     align-items: flex-start;
     padding: 67px 110px 53px;
-=======
-    padding-top: 67px;
-    padding-bottom: 53px;
-    align-items: flex-start;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 
 .footer__logo {
-  border-bottom: 1px solid $grey-logo;
   margin: 0;
-<<<<<<< HEAD
   padding-top: 40px;
   padding-bottom: 12px;
   width: 100%;
   text-align: center;
+  border-bottom: 1px solid $grey-logo;
   transition: opacity 0.25s ease-in-out;
-=======
-  padding-top: 20px;
-  padding-bottom: 12px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
 
   @include tablet {
     width: 128px;
-    border-bottom: none;
+    padding-top: 25px;
     padding-bottom: 14px;
     border-bottom: none;
-    padding-bottom: 14px;
-  }
-
-  @include desktop {
-    padding-top: 0;
   }
 
   @include desktop {
@@ -73,7 +51,6 @@
   }
 }
 
-
 .footer__logo-img {
   width: 128px;
   height: 24px;
@@ -81,12 +58,7 @@
 
 .footer__social {
   margin: 0 auto;
-<<<<<<< HEAD
   padding: 2px 0 19px;
-=======
-  padding-bottom: 19px;
-  padding-top: 2px;
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   border-bottom: 1px solid $grey-logo;
 
   @include tablet {
@@ -94,10 +66,7 @@
     padding-bottom: 0;
     max-width: 95px;
     gap: 22px;
-<<<<<<< HEAD
     padding-left: 39px;
-=======
->>>>>>> bba61ac93569807b1aee3ea99045fc99fc2fa7aa
   }
 }
 

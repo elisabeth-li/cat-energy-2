@@ -40,7 +40,6 @@
     gap: 37px 59px;
   }
 
-
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
     gap: 77px;

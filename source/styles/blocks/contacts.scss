@@ -4,6 +4,7 @@
     position: relative;
 
     @include container;
+    position: relative;
   }
 }
 
@@ -31,16 +32,13 @@
   background-color: $basic-white;
 
   @include tablet {
+    margin: 0 auto;
     padding: 60px 70px;
     gap: 30px;
-    margin: 0 auto;
     max-width: 768px;
   }
 
   @include desktop {
-    padding: 60px 80px;
-    gap: 87px;
-    max-width: 565px;
     position: absolute;
     left: 110px;
     top: 95px;
@@ -53,6 +51,7 @@
 }
 
 .contacts__map-wrapper-img {
+  position: relative;
   height: 362px;
   overflow: hidden;
   text-align: center;
@@ -66,26 +65,33 @@
 
 .contacts__map-wrapper-iframe {
   position: absolute;
-  z-index: 1;
   inset: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
+}
+
+.contacts--nojs .contacts__map-wrapper-iframe {
+  display: none;
+}
+
+.contacts--js .contacts__map-wrapper-img {
+  display: none;
 }
 
 .contacts__map-img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  display: block;
 }
 
-
 .contacts__map-iframe {
-  border: none;
   display: block;
   width: 100%;
   height: 362px;
+  border: none;
 
   @include tablet {
     height: 400px;
@@ -117,12 +123,13 @@
   line-height: 20px;
 
   @include tablet {
-    text-align: end;
-    margin-left: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 157px;
+    text-align: end;
+    margin-left: auto;
+    font-size: 16px;
   }
 
   @include desktop {

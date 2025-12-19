@@ -2,18 +2,11 @@
   @include desktop {
     @include container;
     position: relative;
-
-    @include container;
-    position: relative;
   }
 }
 
-
-.contacts__info {
-  align-items: center;
-  padding: 26px 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.contacts-wrapper--bg-color {
+  background-color: $light-grey;
 
   .contacts__info {
     background-color: $light-grey;
@@ -42,7 +35,10 @@
     position: absolute;
     left: 110px;
     top: 95px;
-    z-index: 3;
+    gap: 87px;
+    padding: 60px 80px;
+    max-width: 565px;
+    z-index: 2;
   }
 }
 
@@ -53,10 +49,8 @@
 .contacts__map-wrapper-img {
   position: relative;
   height: 362px;
-  overflow: hidden;
   text-align: center;
-  position: relative;
-  z-index: 1;
+  z-index: 0;
 
   @include tablet {
     height: 400px;

@@ -2,8 +2,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: $primary-font;
-  font-size: 16px;
   text-decoration: none;
   color: $dark-grey;
   transition: opacity 0.25s ease-in-out;
@@ -11,6 +9,7 @@
   @include tablet {
     gap: 24px;
   }
+
 
   &::after {
     content: "";
@@ -37,7 +36,6 @@
 }
 
 .academy__logo {
-  margin-right: auto;
-  font-family: $primary-font;
-  font-size: 16px;
+  width: 27px;
+  height: 34px;
 }

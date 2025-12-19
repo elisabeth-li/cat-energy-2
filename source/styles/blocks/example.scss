@@ -8,6 +8,7 @@
   @include desktop {
     background: $basic-white;
   }
+}
 
 .example__wrapper {
   @include container;

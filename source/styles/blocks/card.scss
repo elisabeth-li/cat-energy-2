@@ -38,21 +38,6 @@
   }
 }
 
-.card__link-img {
-  width: 100%;
-  height: auto;
-
-  @include tablet {
-    height: 210px;
-    padding-bottom: 10px;
-  }
-
-  @include desktop {
-    width: 169px;
-    height: 210px;
-  }
-}
-
 .card__link {
   color: $grey;
   text-decoration: none;

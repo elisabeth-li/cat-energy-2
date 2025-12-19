@@ -13,6 +13,8 @@
 }
 
 .additional__wrapper {
+  @include container;
+
   @include tablet {
     display: block;
   }
@@ -53,7 +55,6 @@
 
   @include desktop {
     margin-bottom: 80px;
-    padding-left: 0;
   }
 }
 

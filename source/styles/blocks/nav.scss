@@ -48,17 +48,17 @@
   transition: opacity 0.25s ease-in-out;
 }
 
-.nav--opened .nav__toggle::before {
+.nav--nojs .nav__toggle::before {
   transform: rotate(45deg);
   top: 11px;
 }
 
-.nav--opened .nav__toggle::after {
+.nav--nojs .nav__toggle::after {
   transform: rotate(-45deg);
   top: 11px;
 }
 
-.nav--opened .nav__toggle span {
+.nav--nojs .nav__toggle span {
   opacity: 0;
 }
 
@@ -79,17 +79,12 @@
   }
 }
 
-.nav--opened .nav__wrapper {
-  display: block;
-}
-
 .nav--nojs .nav__wrapper {
   display: block;
-  position: static;
 }
 
-.nav--nojs .nav__toggle {
-  display: none;
+.nav--js .nav__wrapper {
+  display: block;
 }
 
 .nav__list {

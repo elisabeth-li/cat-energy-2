@@ -44,6 +44,11 @@
 
 .contacts__map-wrapper {
   position: relative;
+  height: 362px;
+
+  @include tablet {
+    height: 400px;
+  }
 }
 
 .contacts__map-wrapper-img {

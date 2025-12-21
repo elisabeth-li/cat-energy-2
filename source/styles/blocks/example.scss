@@ -2,11 +2,11 @@
   background-color: $bg-grey;
 
   @include tablet {
-    background: linear-gradient(to bottom, $basic-white 58%, $bg-grey 42%);
+    background: linear-gradient(to bottom, $basic-white 617px, $bg-grey 617px);
   }
 
   @include desktop {
-    background: $basic-white;
+    background: linear-gradient(to bottom, $basic-white 136px, $bg-grey 136px);
   }
 }
 
@@ -144,6 +144,7 @@
 
   @include desktop {
     bottom: 3px;
+    background-color: $bg-grey;
   }
 }
 

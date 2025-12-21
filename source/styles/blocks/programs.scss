@@ -117,6 +117,9 @@
 
   @include tablet {
     gap: 22px;
+  }
+
+  @include desktop {
     padding-top: 13px;
   }
 

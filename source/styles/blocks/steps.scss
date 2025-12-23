@@ -64,6 +64,10 @@
   }
 }
 
+.steps__item:first-child {
+  width: 226px;
+}
+
 .steps__item::before {
   content: "";
   display: block;

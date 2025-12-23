@@ -19,9 +19,11 @@
   display: flex;
   align-items: center;
   padding-bottom: 9px;
+  gap: 11px;
 
   @include tablet {
     padding-bottom: 0;
+    gap: 0;
   }
 
   @include desktop {
@@ -83,7 +85,6 @@
   .header__hero-subtitle {
     color: $basic-white;
   }
-
 
   @include tablet {
     .header__hero-title,

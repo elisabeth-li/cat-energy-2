@@ -18,7 +18,7 @@
 
   @include desktop {
     align-items: flex-start;
-    padding: 70px 110px 55px;
+    padding: 65px 110px 60px;
   }
 }
 
@@ -33,13 +33,13 @@
 
   @include tablet {
     width: 128px;
-    padding-top: 25px;
+    padding-top: 23px;
     padding-bottom: 14px;
     border-bottom: none;
   }
 
   @include desktop {
-    padding-top: 0;
+    padding-top: 5px;
   }
 
   &:hover {
@@ -71,6 +71,10 @@
     max-width: 95px;
     gap: 22px;
     padding-left: 39px;
+  }
+
+  @include desktop {
+    padding-top: 7px;
   }
 }
 

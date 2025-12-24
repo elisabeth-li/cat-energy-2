@@ -65,7 +65,9 @@
 }
 
 .steps__item:first-child {
-  width: 226px;
+  @include desktop {
+    width: 226px;
+  }
 }
 
 .steps__item::before {

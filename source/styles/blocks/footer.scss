@@ -13,12 +13,12 @@
 
   @include tablet {
     flex-direction: row;
-    padding: 39px 30px;
+    padding: 43px 30px;
   }
 
   @include desktop {
     align-items: flex-start;
-    padding: 65px 110px 60px;
+    padding: 68px 110px 60px;
   }
 }
 
@@ -33,7 +33,7 @@
 
   @include tablet {
     width: 128px;
-    padding-top: 23px;
+    padding-top: 20px;
     padding-bottom: 14px;
     border-bottom: none;
   }

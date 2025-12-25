@@ -65,8 +65,12 @@
 }
 
 .steps__item:first-child {
+  @include tablet {
+    max-width: 230px;
+  }
+
   @include desktop {
-    width: 226px;
+    max-width: 226px;
   }
 }
 

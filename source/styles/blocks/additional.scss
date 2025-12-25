@@ -49,7 +49,7 @@
   background-color: $basic-white;
 
   @include tablet {
-    margin-bottom: 82px;
+    margin-bottom: 80px;
     padding-left: 40px;
   }
 
@@ -68,7 +68,7 @@
 
   @include tablet {
     gap: 0;
-    margin-bottom: 70px;
+    margin-bottom: 68px;
     padding: 0;
     border: 1px solid $grey-border-light;
   }
@@ -91,7 +91,7 @@
   @include tablet {
     grid-template-columns: 1fr auto auto;
     gap: 23px 52px;
-    padding: 27px 38px;
+    padding: 27px 38px 28px;
     border-left: 0;
     border-right: 0;
   }
@@ -156,6 +156,7 @@
 .additional__gift {
   position: relative;
   display: flex;
+  justify-content: center;
   min-height: 100px;
   height: 290px;
   padding: 60px 20px 43px;
@@ -220,7 +221,7 @@
 
 .additional__gift-text {
   margin: auto 0 0;
-  padding: 0 42px;
+  max-width: 161px;
   text-align: center;
   font-size: 16px;
   line-height: 20px;

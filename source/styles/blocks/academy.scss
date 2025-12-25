@@ -37,6 +37,12 @@
     }
   }
 
+  &:focus {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }

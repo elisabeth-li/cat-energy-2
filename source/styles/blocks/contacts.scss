@@ -1,15 +1,15 @@
-.contacts-wrapper {
+.contacts__wrapper {
   @include desktop {
     @include container;
     position: relative;
   }
 }
 
-.contacts-wrapper--bg-color {
+.contacts__wrapper--bg-color {
   background-color: $light-grey;
 
   .contacts__info {
-    background-color: $light-grey;
+    background-color: inherit;
 
     @include desktop {
       background-color: $basic-white;

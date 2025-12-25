@@ -97,8 +97,8 @@
 
   @include tablet {
     flex-direction: row;
-    gap: 25px;
-    max-width: 440px;
+    gap: 26px;
+    max-width: 460px;
   }
 
   @include desktop {
@@ -157,7 +157,7 @@
   border-bottom: none;
 
   @include tablet {
-    padding: 7px 0;
+    padding: 8px 0;
     border-bottom: 2px solid $basic-green;
   }
 }

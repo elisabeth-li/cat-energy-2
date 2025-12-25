@@ -77,7 +77,7 @@
   }
 }
 
-.header--background {
+.header-wrapper--background {
   position: relative;
 
   .header__hero-title,
@@ -103,7 +103,7 @@
   }
 }
 
-.header--background::after {
+.header-wrapper--background::after {
   content: "";
   position: absolute;
   top: 65px;

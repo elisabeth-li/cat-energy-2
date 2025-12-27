@@ -118,10 +118,11 @@
 
   @include desktop {
     display: block;
+    --scrollbar-width: 17px;
     top: 0;
     right: 0;
     left: 50%;
-    width: 50vw;
+    width: calc(50vw - var(--scrollbar-width));
     height: 694px;
     background-image:
       linear-gradient($overlay-green),
